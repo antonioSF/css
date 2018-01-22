@@ -30,6 +30,51 @@ Other Style Guides
 	* Variables
 	* Mixins
 	* Nested selectors
-8. Best Practices
+8. [Best Practices](#best-pratices)
 
 ## Terminology
+
+---
+
+**[Back to top](#table-of-contents)**
+
+## Best Practices
+
+* Split your CSS across multiple files.
+
+* Document your code (Table of Contents, ...).
+
+* Be semantic with your selectors.
+
+* Do not use ID selectors
+
+* **Avoid Shorthand Syntax** when affecting properties you don't need to modify.
+
+* You should only ever **do as little as you need** to do and nothing more.
+
+* Use a preprocessor - in this case, use Sass.
+
+* Use an **autoprefixer**.
+
+* Provide a consistent and bug-free baseline to every browser (use Normalize.css, sanitize.css, ...).
+
+* Keep your CSS Declarations short.
+
+* Nesting is bad - do no more than 3 levels deep of nesting if you have to.
+
+* @extend should be avoided.
+
+* Avoid @import.
+
+* DRY up your stylesheets.
+
+* Minize and concatenate your stylesheets.
+
+* Consider embedding critical CSS in the ```<head>``` for instant first render.
+
+* Consider loading asynchronously non-critical CSS - use [loadCSS](https://github.com/filamentgroup/loadCSS/).
+
+
+---
+
+**[Back to top](#table-of-contents)**
