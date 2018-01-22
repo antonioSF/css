@@ -30,7 +30,7 @@ Other Style Guides
 	* Variables
 	* Mixins
 	* Nested selectors
-8. [Best Practices](#best-pratices)
+8. [Best Practices](#best-practices)
 
 ## Terminology
 
@@ -42,7 +42,7 @@ Other Style Guides
 
 * Split your CSS across multiple files.
 
-* Document your code (Table of Contents, ...).
+* Document your code - CSS needs more comments.
 
 * Be semantic with your selectors.
 
@@ -60,7 +60,7 @@ Other Style Guides
 
 * Keep your CSS Declarations short.
 
-* Nesting is bad - do no more than 3 levels deep of nesting if you have to.
+* Avoid nesting with Sass - do no more than 3 levels deep of nesting if you have to.
 
 * @extend should be avoided.
 
