@@ -46,7 +46,7 @@ Other Style Guides
 
 * Be semantic with your selectors.
 
-* Do not use ID selectors
+* Do not use ID selectors.
 
 * **Avoid Shorthand Syntax** when affecting properties you don't need to modify.
 
@@ -68,7 +68,13 @@ Other Style Guides
 
 * DRY up your stylesheets.
 
-* Minize and concatenate your stylesheets.
+* Minify and concatenate your stylesheets.
+
+* Validate your CSS.
+
+* CSS tested on CSS Lint.
+
+* Website passed the [WSA Checklist](http://wsa.pt/checklist/).
 
 * Consider embedding critical CSS in the ```<head>``` for instant first render.
 
