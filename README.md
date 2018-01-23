@@ -68,6 +68,17 @@ There are three different ways to apply CSS to an HTML document
 ```
 > **Note**: This method must not be used.
 
+
+```html
+
+<head>
+	<style>
+	  p {
+	  	color: red;
+	  }
+	</style>
+</head>
+```
 ---
 
 **[Back to top](#table-of-contents)**
