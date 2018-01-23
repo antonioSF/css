@@ -35,7 +35,8 @@ Other Style Guides
 10. [Best Practices](#best-practices)
 
 ## Introduction
-If HTML is for content and presentation mainly, CSS (Cascading Style Sheets) is used to style and design that content. When a Web browser displays a document, it first loads the HTML, parses it and creates a DOM (Document Object Model) from it. Only then parses the CSS. There are three different ways to apply CSS to an HTML document
+If HTML is for content and presentation mainly, CSS (Cascading Style Sheets) is used to style and design that content. When a Web browser displays a document, it first loads the HTML, parses it and creates a DOM (Document Object Model) from it. Only then parses the CSS. 
+There are three different ways to apply CSS to an HTML document
 
 * **External Stylesheet**: An external file usually referenced by a ```<link>``` in the ```<head>``` of the HTML Document.
 ```html
@@ -51,9 +52,9 @@ If HTML is for content and presentation mainly, CSS (Cascading Style Sheets) is 
 
 <head>
 	<style>
-	.example {
-		color: red;
-	}
+		.example {
+			color: red;
+		}
 	</style>
 </head>
 ```
@@ -65,7 +66,7 @@ If HTML is for content and presentation mainly, CSS (Cascading Style Sheets) is 
 
 <p style="color:red;">Example</p>
 ```
-> **Note**: This method must be avoided.
+> **Note**: This method must not be used.
 
 ---
 
