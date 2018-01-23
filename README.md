@@ -125,9 +125,51 @@ Having a standard way of writing CSS provides effiency across development within
 
 * Use 2 spaces for indentation.
 * Do not use ID selectors.
+```css
+
+/* bad */
+#foo {
+  display: block;
+}
+
+/* good */
+.foo {
+  display: block;
+}
+```
 * When using multiple selectors in a rule declaration, give each selector its own line.
+```css
+
+/* bad */
+.foo, .bar{
+  display: block;
+  background-color: green;
+  color: red;
+}
+
+/* good */
+.foo,
+.bar {
+  display: block;
+  background-color: green;
+  color: red;
+}
+```
+
 * Properties and values on the same line;
 * Each declaration on its own new line;
+```css
+
+/* bad */
+.bar{display: block;background-color: green;}
+
+/* good */
+.foo {
+  display: block;
+  background-color: green;
+}
+```
+
 * A trailing semi-colon (;) on our last declaration.
 * Put a space before the opening brace { in rule declarations
 * Put closing braces } of rule declarations on a new line.
