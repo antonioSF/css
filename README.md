@@ -307,7 +307,7 @@ It indicates that the order of CSS rules matter, but it's more complex than that
 ```
 In the above example, although source order matters, due to the ```!important``` declaration, it will overide the ```.btn--blue```selector down the line. This is error prone and should be avoided.
 
-* Always favour source order. To achieve this, keep your  declarations short and generic. Avoid being specific early on and abstract your declarations.
+Always favour source order. To achieve this, keep your  declarations short and generic. Avoid specificity early on and abstract your declarations.
 
 ```html
 
@@ -337,6 +337,10 @@ In the above example, although source order matters, due to the ```!important```
 }
 ````
 In the above example, we've abstracted the property ```background-color``` to its own selector, and only kept the main properties that every button in our document share.
+
+##### References
+> * [Cascade and inheritance - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
+> * [CSpecificity - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
 
 ---
 
