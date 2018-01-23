@@ -20,7 +20,7 @@ Other Style Guides
 3. [Formating](#formating)
 4. [Comments](#comments)
 5. [Structure](#structure)
-  * [Mobile first](#mobile-first)
+  * [Mobile First](#mobile-first)
 6. Media Queries
 7. Methodologies
 	* BEM
