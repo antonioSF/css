@@ -19,8 +19,8 @@ Other Style Guides
 	* [Properties](#properties)
 3. [Formating](#formating)
 4. [Comments](#comments)
-5. Basic Structure
-  * Mobile first
+5. [Structure](#structure)
+  * [Mobile first](#mobile-first)
 6. Media Queries
 7. Methodologies
 	* BEM
@@ -141,18 +141,14 @@ Having a standard way of writing CSS provides effiency across development within
 ```css
 
 /* bad */
-.foo, .bar{
+.foo, .bar {
   display: block;
-  background-color: green;
-  color: red;
 }
 
 /* good */
 .foo,
 .bar {
   display: block;
-  background-color: green;
-  color: red;
 }
 ```
 
@@ -228,6 +224,52 @@ Having a standard way of writing CSS provides effiency across development within
 **[Back to top](#table-of-contents)**
 
 ## Comments
+A CSS comment is used to add explanatory notes to the code.
+
+* Block comments should differ from section comments. Make them distinctive.
+
+* Begin every new major section of a CSS project with a title.
+```css
+
+
+/*------------------------------------*\
+  #SECTION-TITLE
+\*------------------------------------*/
+
+.selector { }
+
+
+
+
+/*------------------------------------*\
+  #ANOTHER-SECTION-TITLE
+\*------------------------------------*/
+
+.another-selector { }
+```
+* Avoid end-of-line comments.
+
+* Prefer line comments to block comments.
+```css
+
+/*
+ * Long comments should not be larger than 80 characters.
+ * They should describe, in detail, the CSS that follows.
+ */
+ .selector { }
+
+//comment in Sass
+.another-selector { }
+
+/* Comment */
+.foo { }
+```
+
+---
+
+**[Back to top](#table-of-contents)**
+
+## Structure
 
 ---
 
