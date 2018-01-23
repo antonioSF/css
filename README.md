@@ -42,7 +42,7 @@ There are three different ways to apply CSS to an HTML document
 ```html
 
 <head>
-	<link rel="stylesheet" href="/path/to/styles/main.css">
+  <link rel="stylesheet" href="/path/to/styles/main.css">
 </head>
 ```
 > **Note**: This method is arguably the best and the one you should use.
@@ -51,11 +51,11 @@ There are three different ways to apply CSS to an HTML document
 ```html
 
 <head>
-	<style>
-		.example {
-			color: red;
-		}
-	</style>
+  <style>
+    .example {
+      color: red;
+    }
+  </style>
 </head>
 ```
 > **Note**: This method should be avoided and only considered if there's a valid reason for it.
@@ -68,17 +68,6 @@ There are three different ways to apply CSS to an HTML document
 ```
 > **Note**: This method must not be used.
 
-
-```html
-
-<head>
-	<style>
-	  p {
-	  	color: red;
-	  }
-	</style>
-</head>
-```
 ---
 
 **[Back to top](#table-of-contents)**
