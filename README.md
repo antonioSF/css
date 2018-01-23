@@ -7,30 +7,30 @@ WSA Internal CSS Coding Standards Guide
 
 Other Style Guides
 
-	- [HTML5](https://github.com/antonioSF/html)
-	- [JavaScript](https://github.com/antonioSF)
-	- [Environment / Scaffolding / Bundles / deployments](https://github.com/antonioSF)
+  - [HTML5](https://github.com/antonioSF/html)
+  - [JavaScript](https://github.com/antonioSF)
+  - [Environment / Scaffolding / Bundles / deployments](https://github.com/antonioSF)
 
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Terminology](#terminology)
-	* [Rule Declaration](#rule-declaration)
-	* [Selectors](#selectors)
-	* [Properties](#properties)
+    * [Rule Declaration](#rule-declaration)
+    * [Selectors](#selectors)
+    * [Properties](#properties)
 3. [Formating](#formating)
 4. [Comments](#comments)
 5. [Structure](#structure)
-	* The Cascade
+    * The Cascade
 6. Media Queries
 7. Methodologies
-	* BEM
-	* OOCSS
+    * BEM
+    * OOCSS
 8. Sass
-	* Syntax
-	* Ordering
-	* Variables
-	* Mixins
-	* Nested selectors
+    * Syntax
+    * Ordering
+    * Variables
+    * Mixins
+    * Nested selectors
 9. Frameworks
 10. [Best Practices](#best-practices)
 
@@ -42,7 +42,7 @@ There are three different ways to apply CSS to an HTML document:
 ```html
 
 <head>
-	<link rel="stylesheet" href="/path/to/styles/main.css">
+    <link rel="stylesheet" href="/path/to/styles/main.css">
 </head>
 ```
 > **Note**: This method is the one you should use for a variety of reasons (separation of concerns, consistency, scalable, styles for multiple documents, ...).
@@ -51,11 +51,11 @@ There are three different ways to apply CSS to an HTML document:
 ```html
 
 <head>
-	<style>
-		.example {
-			color: red;
-		}
-	</style>
+    <style>
+        .example {
+            color: red;
+        }
+    </style>
 </head>
 ```
 > **Note**: This method should be avoided and only considered if there's a valid reason for it.
@@ -92,15 +92,15 @@ Are patterns that reference some elements in the DOM tree. Selectors can match H
 ```css
 
 header {
-	/* ... */
+    /* ... */
 }
 
 .my-class {
-	/* ... */
+    /* ... */
 }
 
 [aria-hidden] {
-	/* ... */
+    /* ... */
 }
 ```
 #### Properties
@@ -109,9 +109,9 @@ Are human-readable identifiers that indicate which stylistic features (e.g. font
 ```css
 
 /* selector */ {
-	display: block;
-	background-color: green;
-	color: red;
+    display: block;
+    background-color: green;
+    color: red;
 }
 ```
 
@@ -129,12 +129,12 @@ Having a standard way of writing CSS provides effiency across development within
 
 /* bad */
 #foo {
-	display: block;
+    display: block;
 }
 
 /* good */
 .foo {
-	display: block;
+    display: block;
 }
 ```
 * When using multiple selectors in a rule declaration, give each selector its own line.
@@ -142,13 +142,13 @@ Having a standard way of writing CSS provides effiency across development within
 
 /* bad */
 .foo, .bar {
-	display: block;
+    display: block;
 }
 
 /* good */
 .foo,
 .bar {
-	display: block;
+    display: block;
 }
 ```
 
@@ -161,8 +161,8 @@ Having a standard way of writing CSS provides effiency across development within
 
 /* good */
 .foo {
-	display: block;
-	background-color: green;
+    display: block;
+    background-color: green;
 }
 ```
 
@@ -174,15 +174,15 @@ Having a standard way of writing CSS provides effiency across development within
 
 /* bad */
 #foo, .bar{
-	display:block;background-color:green;
-	color:red;}
+    display:block;background-color:green;
+    color:red;}
 
 /* good */
 .foo,
 .bar {
-	display: block;
-	background-color: green;
-	color: red;
+    display: block;
+    background-color: green;
+    color: red;
 }
 ```
 * Put blank lines between rule declarations.
@@ -190,19 +190,19 @@ Having a standard way of writing CSS provides effiency across development within
 
 /* bad */
 .foo {
-	display: block;
+    display: block;
 }
 .bar {
-	background-color: green;
+    background-color: green;
 }
 
 /* good */
 .foo {
-	display: block;
+    display: block;
 }
 
 .bar {
-	background-color: green;
+    background-color: green;
 }
 ```
 * Use dashes over camelCasing in class names.
@@ -210,12 +210,12 @@ Having a standard way of writing CSS provides effiency across development within
 
 /* bad */
 .fooBar {
-	display: block;
+    display: block;
 }
 
 /* good */
 .foo-bar {
-	display: block;
+    display: block;
 }
 ```
 
@@ -233,7 +233,7 @@ A CSS comment is used to add explanatory notes to the code.
 
 
 /*------------------------------------*\
-	#SECTION-TITLE
+    #SECTION-TITLE
 \*------------------------------------*/
 
 .selector { }
@@ -242,7 +242,7 @@ A CSS comment is used to add explanatory notes to the code.
 
 
 /*------------------------------------*\
-	#ANOTHER-SECTION-TITLE
+    #ANOTHER-SECTION-TITLE
 \*------------------------------------*/
 
 .another-selector { }
@@ -294,15 +294,15 @@ It indicates that the order of CSS rules matter, but it's more complex than that
 ```css
 
 .btn {
-	width: 100px;
-	height: 60px;
-	text-align: center;
-	background-color: red !important;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    background-color: red !important;
 }
 
 
 .btn--blue {
-	background-color: blue;
+    background-color: blue;
 }
 ```
 In the above example, although source order matters, due to the ```!important``` declaration, it will overide the ```.btn--blue```selector down the line. This is error prone and should be avoided.
@@ -322,18 +322,18 @@ Always favour source order. To achieve this, keep your  declarations short and g
 ```css
 
 .btn {
-	width: 100px;
-	height: 60px;
-	text-align: center;
+    width: 100px;
+    height: 60px;
+    text-align: center;
 }
 
 .btn--red {
-	background-color: red;
+    background-color: red;
 }
 
 
 .btn--blue {
-	background-color: blue;
+    background-color: blue;
 }
 ````
 In the above example, we've abstracted the property ```background-color``` to its own selector, and only kept the main properties that every button in our document share.
