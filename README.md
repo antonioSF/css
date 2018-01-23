@@ -36,7 +36,7 @@ Other Style Guides
 
 ## Introduction
 If HTML is for content and presentation mainly, CSS (Cascading Style Sheets) is used to style and design that content. When a Web browser displays a document, it first loads the HTML, parses it and creates a DOM (Document Object Model) from it. Only then parses the CSS. 
-There are three different ways to apply CSS to an HTML document
+There are three different ways to apply CSS to an HTML document:
 
 * **External Stylesheet**: An external file usually referenced by a ```<link>``` in the ```<head>``` of the HTML Document.
 ```html
@@ -87,7 +87,7 @@ A Rule declaration or **ruleset** is the name given to a **selector** (or a grou
 ```
 
 #### Selectors
-Are patterns that matches some elements in the DOM tree. Selectors can match HTML elements, as well as an element's class, ID, or any of its attributes.
+Are patterns that reference some elements in the DOM tree. Selectors can match HTML elements, as well as an element's class, ID, or any of its attributes.
 
 ```css
 
@@ -120,6 +120,66 @@ Are human-readable identifiers that indicate which stylistic features (e.g. font
 **[Back to top](#table-of-contents)**
 
 ## Formating
+Having a standard way of writing CSS provides effiency across development within a team.
+**Code that looks clean feels clean**.
+
+* Use 2 spaces for indentation.
+* Do not use ID selectors.
+* When using multiple selectors in a rule declaration, give each selector its own line.
+* Properties and values on the same line;
+* Each declaration on its own new line;
+* A trailing semi-colon (;) on our last declaration.
+* Put a space before the opening brace { in rule declarations
+* Put closing braces } of rule declarations on a new line.
+* In properties, put a space after, but not before, the : character.
+```css
+
+/* bad */
+#foo, .bar{
+  display:block;background-color:green;
+  color:red;}
+
+/* good */
+.foo,
+.bar {
+  display: block;
+  background-color: green;
+  color: red;
+}
+```
+* Put blank lines between rule declarations.
+```css
+
+/* bad */
+.foo {
+  display: block;
+}
+.bar {
+  background-color: green;
+}
+
+/* good */
+.foo {
+  display: block;
+}
+
+.bar {
+  background-color: green;
+}
+```
+* Use dashes over camelCasing in class names.
+```css
+
+/* bad */
+.fooBar {
+  display: block;
+}
+
+/* good */
+.foo-bar {
+  display: block;
+}
+```
 
 ---
 
