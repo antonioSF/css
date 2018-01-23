@@ -35,6 +35,7 @@ Other Style Guides
 10. [Best Practices](#best-practices)
 8. Sass
   * Syntax
+10. test
 
 ## Introduction
 If HTML is for content and presentation mainly, CSS (Cascading Style Sheets) is used to style and design that content. When a Web browser displays a document, it first loads the HTML, parses it and creates a DOM (Document Object Model) from it. Only then parses the CSS. 
