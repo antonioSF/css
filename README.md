@@ -271,6 +271,73 @@ A CSS comment is used to add explanatory notes to the code.
 
 ## Structure
 
+#### The Cascade
+CSS is an acronym of Cascading Style Sheets, which indicates that the notion of the cascade is important.
+It indicates that the order of CSS rules matter, but it's more complex than that. What selectors win out in the cascade depends on three factors from top to bottom:
+
+* Source order
+
+* Specificity
+
+* Importance
+
+```html
+
+
+<button class="btn">red button</button>
+
+...
+
+<button class="btn btn--blue">blue button</button>
+```
+
+```css
+
+.btn {
+	width: 100px;
+	height: 60px;
+	text-align: center;
+	background-color: red !important;
+}
+
+
+.btn--blue {
+	background-color: blue;
+}
+```
+In the above example, although source order matters, due to the ```!important``` declaration, it will overide the ```.btn--blue```selector down the line. This is error prone and should be avoided.
+
+* Always favour source order. To achieve this, keep your  declarations short and generic. Avoid being specific early on and abstract your declarations.
+
+```html
+
+
+<button class="btn btn--red">red button</button>
+
+...
+
+<button class="btn btn--blue">blue button</button>
+```
+
+```css
+
+.btn {
+	width: 100px;
+	height: 60px;
+	text-align: center;
+}
+
+.btn--red {
+	background-color: red;
+}
+
+
+.btn--blue {
+	background-color: blue;
+}
+````
+In the above example, we've abstracted the property ```background-color``` to its own selector, and only kept the main properties that every button in our document share.
+
 ---
 
 **[Back to top](#table-of-contents)**
