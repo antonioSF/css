@@ -14,9 +14,9 @@ Other Style Guides
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Terminology](#terminology)
-	* Rule Declaration
-	* Selectors
-	* Properties
+	* [Rule Declaration](#rule-declaration)
+	* [Selectors](#selectors)
+	* [Properties](#properties)
 3. Basic Structure
 	* Mobile first
 4. Formating
@@ -73,7 +73,43 @@ There are three different ways to apply CSS to an HTML document
 **[Back to top](#table-of-contents)**
 
 ## Terminology
+CSS is a declarative language, which makes its syntax fairly easy and straight forward to understand.
+At its most basic level, CSS consists of **rule declarations - rulesets**.
 
+#### Rule Declaration
+A Rule declaration or **ruleset** is the name given to a **selector** (or a group of selectors) and the corresponding declaration block. A declaration block is formed by a **property** and a **value** pair.
+
+```html
+
+[selector] {
+ [property]: [value];
+}
+```
+
+#### Selectors
+Are patterns that matches some elements in the DOM tree. Selectors can match HTML elements, as well as an element's class, ID, or any of its attributes.
+
+```css
+
+.my-class {
+  /* ... */
+}
+
+[aria-hidden] {
+  /* ... */
+}
+```
+#### Properties
+Are human-readable identifiers that indicate which stylistic features (e.g. font, width, background color) you want to change. Properties are key-value pairs, and a rule declaration can contain one or more property declarations.
+
+```css
+
+/* selector */ {
+  display: block;
+  background-color: green;
+  color: red;
+}
+```
 ---
 
 **[Back to top](#table-of-contents)**
@@ -92,13 +128,13 @@ There are three different ways to apply CSS to an HTML document
 
 * You should only ever **do as little as you need** to do and nothing more.
 
+* Keep your CSS Declarations short.
+
 * Use a preprocessor - in this case, use Sass.
 
 * Use an **autoprefixer**.
 
 * Provide a consistent and bug-free baseline to every browser (use Normalize.css, sanitize.css, ...).
-
-* Keep your CSS Declarations short.
 
 * Avoid nesting with Sass - do no more than 3 levels deep of nesting, if you have to.
 
