@@ -17,10 +17,10 @@ Other Style Guides
 	* [Rule Declaration](#rule-declaration)
 	* [Selectors](#selectors)
 	* [Properties](#properties)
-3. Basic Structure
-	* Mobile first
-4. Formating
-5. Comments
+3. [Formating](#formating)
+4. [Comments](#comments)
+5. Basic Structure
+  * Mobile first
 6. Media Queries
 7. Methodologies
 	* BEM
@@ -45,7 +45,7 @@ There are three different ways to apply CSS to an HTML document
   <link rel="stylesheet" href="/path/to/styles/main.css">
 </head>
 ```
-> **Note**: This method is arguably the best and the one you should use.
+> **Note**: This method is the one you should use for a variety of reasons (separation of concerns, consistency, scalable, styles for multiple documents, ...).
 
 * **Internal Stylesheet**: When you place your CSS inside a ```<style>``` element in the ```<head>```.
 ```html
@@ -91,6 +91,10 @@ Are patterns that matches some elements in the DOM tree. Selectors can match HTM
 
 ```css
 
+header {
+  /* ... */
+}
+
 .my-class {
   /* ... */
 }
@@ -110,6 +114,19 @@ Are human-readable identifiers that indicate which stylistic features (e.g. font
   color: red;
 }
 ```
+
+---
+
+**[Back to top](#table-of-contents)**
+
+## Formating
+
+---
+
+**[Back to top](#table-of-contents)**
+
+## Comments
+
 ---
 
 **[Back to top](#table-of-contents)**
