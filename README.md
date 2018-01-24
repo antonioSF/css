@@ -293,7 +293,7 @@ It indicates that the order of CSS rules matter, but it's more complex than that
 
 ```css
 
-.btn {
+.btn-positive {
     width: 100px;
     height: 60px;
     padding: 10px;
@@ -303,11 +303,16 @@ It indicates that the order of CSS rules matter, but it's more complex than that
 }
 
 
-.btn--negative {
+.btn-negative {
+    width: 100px;
+    height: 60px;
+    padding: 10px;
+    text-align: center;
+    color: white;
     background-color: red;
 }
 ```
-In the above example, although source order matters, due to the ```!important``` declaration, it will overide the ```.btn--negative```selector down the line. This is error prone and should be avoided.
+In the above example, although source order matters, due to the ```!important``` declaration, it will overide the ```.btn-negative```selector down the line. This is error prone and should be avoided.
 
 You should favour source order. To achieve this, keep your declarations short and generic. Avoid specificity early on. Consider creating utility classes like ```.u-text-right``` if you must do very temporary important or implementation specific changes. 
 
