@@ -452,24 +452,23 @@ The **@media** at-rule is used to conditionally apply styles to a document and i
 ```
 
 Media types:
-* all: Suitable for all devices.
-* print: Intended for paged material and for documents viewed on screen in print preview mode.
-* screen: Intended primarily for color computer screens.
-* speech: Intended for speech synthesizers.
+* **all**: Suitable for all devices.
+* **print**: Intended for paged material and for documents viewed on screen in print preview mode.
+* **screen**: Intended primarily for color computer screens.
+* **speech**: Intended for speech synthesizers.
 
 Media features:
-* width: Width of the viewport.
-* height: Height of the viewport.
-* aspect-ratio: Width-to-height aspect ratio of the viewport.
-* orientation: Orientation of the viewport.
-* resolution: Pixel density of the output device.
-* ...
-You can view all of the media features available [here](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#Media_features)
+* **width**: Width of the viewport.
+* **height**: Height of the viewport.
+* **aspect-ratio**: Width-to-height aspect ratio of the viewport.
+* **orientation**: Orientation of the viewport.
+* **resolution**: Pixel density of the output device.
+* ... you can view all of the media features available [here](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#Media_features)
 
 Logical Operators:
-* and: Used for combining multiple media features together into a single media query.
-* not: Used to negate a media query, returning true if the query would otherwise return false.
-* only: Used to apply a style only if an entire query matches.
+* **and**: Used for combining multiple media features together into a single media query.
+* **not**: Used to negate a media query, returning true if the query would otherwise return false.
+* **only**: Used to apply a style only if an entire query matches.
 
 ```css
 
