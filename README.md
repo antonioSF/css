@@ -284,11 +284,11 @@ It indicates that the order of CSS rules matter, but it's more complex than that
 ```html
 
 
-<button class="btn">Aprove action</button>
+<button class="btn-positive">Aprove action</button>
 
 ...
 
-<button class="btn btn--negative">Cancel action</button>
+<button class="btn-negative">Cancel action</button>
 ```
 
 ```css
@@ -348,13 +348,13 @@ Let's try to make it better, applying some CSS principles:
     background-color: red;
 }
 ````
-In the above example, we've **abstracted** the ```.btn``` properties keeping them generic allowing them to be shared across every button in the application. We've also used **specificity** and **extended** new features instead of modifying the base class ```.btn``. We've built the skeleton for our buttons and later extended them with theming/skin providing them reason and semantic. 
+In the above example, we've **abstracted** the ```.btn``` properties keeping it generic. We've also used **specificity** and **extended** new features instead of modifying the base class ```.btn``. We've built the skeleton for our buttons and later extended them with theming/skin providing them reason and semantic (positive/negative). 
 
 With this, we've already introduced some CSS principles like: 
 * **Object-Oriented CSS (OOCSS)**. 
 * **Single Responsibility Principle**. 
 * **The Open/Closed Principle**.
-* **DRY -  Don't Repeat Repeat Yourself**.
+* **DRY -  Don't Repeat Yourself**.
 
 
 ##### References
