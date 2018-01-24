@@ -70,7 +70,7 @@ There are three different ways to apply CSS to an HTML document:
 
 <p style="color:red;">Example</p>
 ```
-> **Note**: This method must not be used.
+> **Note**: This method must be avoided and only considered if there's a valid reason for it (e.g. CSS in JS).
 
 ---
 
