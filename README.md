@@ -509,6 +509,9 @@ However, be careful not to bloat your code with the overuse of media queries. If
 
 ---
 
+## Layout
+
+
 **[Back to top](#table-of-contents)**
 
 ## Best Practices
