@@ -370,8 +370,8 @@ With this, we've already introduced some CSS principles like:
 
 **[Back to top](#table-of-contents)**
 
-#### Mobile-first & media queries
-Having a mobile-first approach while architecting your CSS has enormous benefits to development.
+#### Mobile-first & Media Queries
+A mobile-first approach while architecting your CSS has enormous benefits to development.
 While it may be related to Responsive Web Design, mobile-first approach also allow us to better implement some best practices:
 
 * **DRY code**.
@@ -381,7 +381,7 @@ While it may be related to Responsive Web Design, mobile-first approach also all
 
 Using this approach and following CSS principles, developers can build powerful designs while keeping the source code **clean and lean**.
 
-Below is an example of a structure using the mobile-first approach. From top to bottom: generic to specific, ending with Media Queries. Using Media Queries we can target different widths/heights/resolutions/print.
+Below is an example of a structure using the mobile-first approach. From top to bottom: generic to specific, ending with Media Queries. Using Media Queries we can target different widths/heights/resolutions/print/etc.
 
 ```css
 
@@ -424,14 +424,81 @@ html { }
     #MEDIA QUERIES
 \*------------------------------------*/
 
-/* specific styles for bigger devices */
+/* specific styles */
 
 ```
 > **Note**: Following this structure, your code will be a lot cleaner and error free. 
-Since all CSS that isn't inside a media query will get parsed by your mobile-devices no-matter what, target one of the smallest device in the market (e.g. IPhone 5) and build from there.
+Since all CSS that isn't inside a media query will get parsed by your mobile-devices no-matter what, target the smallest devices and build from there.
 
 ##### Media Queries
-Media queries are a key component of Responsive Web Design, which make it possible for CSS to adapt based on various parameters or device characteristics. A media query can apply different styles depending on a device's general type (such as **print vs. screen**), specific characteristics (such as the **width of the browser viewport**, device in **portrait or landscape mode**, or environment (such as **ambient light conditions**). The **@media** at-rule is used to conditionally apply styles to a document.
+Media queries are a key component of Responsive Web Design, which make it possible for CSS to adapt based on various parameters or device characteristics. A media query can apply different styles depending on a device's general type (such as **print vs. screen**), specific characteristics (such as the **width of the browser viewport**, device in **portrait or landscape mode**, or environment (such as **ambient light conditions**).
+
+###### Syntax
+The **@media** at-rule is used to conditionally apply styles to a document and it is composed of one or more media queries, each of which consists of an optional **media type** and any number of **media feature** expressions. Multiple queries can be combined in various ways by using **logical operators**, and are case-insensitive.
+
+```css
+
+@media [media type] {
+  
+}
+
+@media [media feature] {
+  
+}
+
+@media [logical operator] [media type] [logical operator] [media feature] {
+  
+}
+```
+
+Media types:
+* all: Suitable for all devices.
+* print: Intended for paged material and for documents viewed on screen in print preview mode.
+* screen: Intended primarily for color computer screens.
+* speech: Intended for speech synthesizers.
+
+Media features:
+* width: Width of the viewport.
+* height: Height of the viewport.
+* aspect-ratio: Width-to-height aspect ratio of the viewport.
+* orientation: Orientation of the viewport.
+* resolution: Pixel density of the output device.
+
+...
+
+You can view all of the media features available [here](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#Media_features)
+
+Logical Operators:
+* and: Used for combining multiple media features together into a single media query.
+* not: Used to negate a media query, returning true if the query would otherwise return false.
+* only: Used to apply a style only if an entire query matches.
+
+```css
+
+/* target only screen media where browser width is bigger than 640px */
+
+@media only screen and (min-width: 640px) {
+  .some-selector { }
+}
+
+/* target media where browser width is bigger than 641px and smaller than 1024px */
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  .some-selector { }
+}
+
+...
+
+/* target only print media */
+
+@media print {
+  .some-selector { }
+}
+```
+
+> **Note**: Most of the times, you should follow the pattern of mobile-first using the ```min-width: ``` feature when targeting screen media types. At the most basic you'll target medium, large and extra-large devices. Favor media features based on your content and not devices. 
+Don't bloat your code with the overuse of media queries. If you notice a lot of media queries then something must be wrong with your code. Go back and refactor.
+
 
 ##### References
 > * [Cascade and inheritance - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
