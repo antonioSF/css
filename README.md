@@ -464,8 +464,6 @@ Media features:
 * orientation: Orientation of the viewport.
 * resolution: Pixel density of the output device.
 
-...
-
 You can view all of the media features available [here](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#Media_features)
 
 Logical Operators:
@@ -481,9 +479,9 @@ Logical Operators:
   .some-selector { }
 }
 
-/* target media where browser width is bigger than 641px and smaller than 1024px */
+/* target media where browser width is bigger than 1024px and smaller than 1440px */
 
-@media only screen and (min-width: 641px) and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .some-selector { }
 }
 
@@ -497,7 +495,7 @@ Logical Operators:
 ```
 
 > **Note**: Most of the times, you should follow the pattern of mobile-first using the ```min-width: ``` feature when targeting screen media types. At the most basic you'll target medium, large and extra-large devices. Favor media features based on your content and not devices. 
-Don't bloat your code with the overuse of media queries. If you notice a lot of media queries then something must be wrong with your code. Go back and refactor.
+However, be careful not to bloat your code with the overuse of media queries. If you notice a lot of media queries then something must be wrong with your code.
 
 
 ##### References
