@@ -21,7 +21,7 @@ Other Guides
 4. [Comments](#comments)
 5. [Architecture](#architecture)
     * [The Cascade & Principles](#the-cascade--principles)
-    * [Mobile first & media queries](#mobile-first--media-queries)
+    * [Mobile first & Media Queries](#mobile-first--media-queries)
 6. [Layout](#layout)
     * [Positioning](#positioning)
     * [Floats](#floats)
@@ -463,7 +463,7 @@ Media features:
 * aspect-ratio: Width-to-height aspect ratio of the viewport.
 * orientation: Orientation of the viewport.
 * resolution: Pixel density of the output device.
-
+* ...
 You can view all of the media features available [here](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#Media_features)
 
 Logical Operators:
@@ -499,7 +499,6 @@ However, be careful not to bloat your code with the overuse of media queries. If
 > * [Media queries - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries)
 > * [Using media queries - CSS | MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 > * [@media - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
-> * [Mobile-first CSS – mrmrs – Medium](https://medium.com/@mrmrs_/mobile-first-css-48bc4cc3f60f)
 > * [Mobile-first CSS – mrmrs – Medium](https://medium.com/@mrmrs_/mobile-first-css-48bc4cc3f60f)
 > * [How To Write Mobile-first CSS | Zell Liew](https://zellwk.com/blog/how-to-write-mobile-first-css/)
 
