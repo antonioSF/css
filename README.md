@@ -375,16 +375,13 @@ Having a mobile-first approach while architecting your CSS has enormous benefits
 While it may be related to Responsive Web Design, mobile-first approach also allow us to better implement some best practices:
 
 * **DRY code**.
-* **Abstraction**.
-* **Short and generic declarations**.
 * **Scalability**.
 * **Maintainability**.
 * **Light-weight**.
 
 Using this approach and following CSS principles, developers can build powerful designs while keeping the source code **clean and lean**.
 
-Below is an example of a structure using the mobile-first approach. From top to bottom: generic to specific. 
-Using Media Queries we can target different widths/heights/resolutions/print.
+Below is an example of a structure using the mobile-first approach. From top to bottom: generic to specific, ending with Media Queries. Using Media Queries we can target different widths/heights/resolutions/print.
 
 ```css
 
@@ -430,7 +427,7 @@ html { }
 /* specific styles for bigger devices */
 
 ```
-> **note**: Following this structure, your code will be a lot cleaner and error free. 
+> **Note**: Following this structure, your code will be a lot cleaner and error free. 
 Target one of the smallest device in the market (e.g. IPhone 5) and build from there.
 
 ##### Media Queries
