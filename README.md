@@ -1,11 +1,11 @@
-# CSS / Sass Style Guide
+# CSS / Sass Guide
 
-WSA Internal CSS Coding Standards Guide
+WSA Internal CSS Guide
 
 > **Note**: The purpose of these guides are to provide coding standards and conventions for the majority of WSA projects. Some elements might not be required depending on the project specifications. It also assumes you have a basic or no knowledge of Front-End technologies and Responsive Web Design. It is meant to be an on-going collaboration project.
 
 
-Other Style Guides
+Other Guides
 
   - [HTML5](https://github.com/antonioSF/html)
   - [JavaScript](https://github.com/antonioSF)
@@ -21,10 +21,14 @@ Other Style Guides
 4. [Comments](#comments)
 5. [Architecture](#architecture)
     * [The Cascade & Principles](#the-cascade--principles)
-6. Media Queries
+    * [Mobile first & media queries](#mobile-first--media-queries)
+6. Layout
+    * Positioning
+    * Floats
+    * Flexbox
+    * Grid
 7. Methodologies
     * BEM
-    * OOCSS
 8. Sass
     * Syntax
     * Ordering
@@ -361,6 +365,9 @@ With this, we've already introduced some CSS principles like:
 > * [Cascade and inheritance - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
 > * [CSpecificity - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
 > * [CSS Guidelines (2.2.5)](https://cssguidelin.es/#architectural-principles)
+
+## Methodologies
+
 
 ---
 
