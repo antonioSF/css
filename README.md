@@ -19,8 +19,8 @@ Other Style Guides
     * [Properties](#properties)
 3. [Formating](#formating)
 4. [Comments](#comments)
-5. [Structure](#structure)
-    * The Cascade
+5. [Architecture](#architecture)
+    * [The Cascade & Principles](#the-cascade--principles)
 6. Media Queries
 7. Methodologies
     * BEM
@@ -269,9 +269,9 @@ A CSS comment is used to add explanatory notes to the code.
 
 **[Back to top](#table-of-contents)**
 
-## Structure
+## Architecture
 
-#### The Cascade
+#### The Cascade & Principles
 CSS is an acronym of Cascading Style Sheets, which indicates that the notion of the cascade is important.
 It indicates that the order of CSS rules matter, but it's more complex than that. What selectors win out in the cascade depends on three factors from top to bottom:
 
@@ -360,6 +360,7 @@ With this, we've already introduced some CSS principles like:
 ##### References
 > * [Cascade and inheritance - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
 > * [CSpecificity - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+> * [CSS Guidelines (2.2.5)](https://cssguidelin.es/#architectural-principles)
 
 ---
 
