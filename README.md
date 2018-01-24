@@ -284,11 +284,11 @@ It indicates that the order of CSS rules matter, but it's more complex than that
 ```html
 
 
-<button class="btn">red button</button>
+<button class="btn">Aprove action</button>
 
 ...
 
-<button class="btn btn--blue">blue button</button>
+<button class="btn btn--negative">Cancel action</button>
 ```
 
 ```css
@@ -296,27 +296,29 @@ It indicates that the order of CSS rules matter, but it's more complex than that
 .btn {
     width: 100px;
     height: 60px;
+    padding: 10px;
     text-align: center;
-    background-color: red !important;
+    color: white;
+    background-color: green !important;
 }
 
 
-.btn--blue {
-    background-color: blue;
+.btn--negative {
+    background-color: red;
 }
 ```
-In the above example, although source order matters, due to the ```!important``` declaration, it will overide the ```.btn--blue```selector down the line. This is error prone and should be avoided.
+In the above example, although source order matters, due to the ```!important``` declaration, it will overide the ```.btn--negative```selector down the line. This is error prone and should be avoided.
 
-Always favour source order. To achieve this, keep your  declarations short and generic. Avoid specificity early on and abstract your declarations.
+You should favour source order. To achieve this, keep your declarations short and generic. Avoid specificity early on. Consider creating utility classes like ```.u-text-right``` if you must do very temporary important or implementation specific changes.
 
 ```html
 
 
-<button class="btn btn--red">red button</button>
+<button class="btn btn--positive">Aprove action</button>
 
 ...
 
-<button class="btn btn--blue">blue button</button>
+<button class="btn btn--negative">Cancel action</button>
 ```
 
 ```css
@@ -324,19 +326,29 @@ Always favour source order. To achieve this, keep your  declarations short and g
 .btn {
     width: 100px;
     height: 60px;
+    padding: 10px;
     text-align: center;
 }
 
-.btn--red {
+.btn--positive {
+    color: white;
+    background-color: green;
+}
+
+
+.btn--negative {
+    color: white;
     background-color: red;
 }
-
-
-.btn--blue {
-    background-color: blue;
-}
 ````
-In the above example, we've abstracted the property ```background-color``` to its own selector, and only kept the main properties that every button in our document share.
+In the above example, we've **abstracted** the ```.btn``` properties keeping them generic allowing them to be shared across every button in the application. We've also used **specificity** and **extended** new features instead of modifying the base class ```.btn``. We've built the skeleton for our buttons and later extended them with theming/skin providing them reason and semantic. 
+
+With this, we've already introduced some CSS principles like: 
+* **Object-Oriented CSS (OOCSS)**. 
+* **Single Responsibility Principle**. 
+* **The Open/Closed Principle**.
+* **DRY -  Don't Repeat Repeat Yourself**.
+
 
 ##### References
 > * [Cascade and inheritance - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
