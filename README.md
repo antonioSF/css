@@ -428,10 +428,10 @@ html { }
 
 ```
 > **Note**: Following this structure, your code will be a lot cleaner and error free. 
-Target one of the smallest device in the market (e.g. IPhone 5) and build from there.
+Since all CSS that isn't inside a media query will get parsed by your mobile-devices no-matter what, target one of the smallest device in the market (e.g. IPhone 5) and build from there.
 
 ##### Media Queries
-Media queries are a key component of responsive design, which make it possible for CSS to adapt based on various parameters or device characteristics. A media query can apply different styles depending on a device's general type (such as **print vs. screen**), specific characteristics (such as the **width of the browser viewport**, device in **portrait or landscape mode**, or environment (such as **ambient light conditions**). The **@media** at-rule is used to conditionally apply styles to a document.
+Media queries are a key component of Responsive Web Design, which make it possible for CSS to adapt based on various parameters or device characteristics. A media query can apply different styles depending on a device's general type (such as **print vs. screen**), specific characteristics (such as the **width of the browser viewport**, device in **portrait or landscape mode**, or environment (such as **ambient light conditions**). The **@media** at-rule is used to conditionally apply styles to a document.
 
 ##### References
 > * [Cascade and inheritance - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
