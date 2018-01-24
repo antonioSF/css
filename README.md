@@ -309,7 +309,9 @@ It indicates that the order of CSS rules matter, but it's more complex than that
 ```
 In the above example, although source order matters, due to the ```!important``` declaration, it will overide the ```.btn--negative```selector down the line. This is error prone and should be avoided.
 
-You should favour source order. To achieve this, keep your declarations short and generic. Avoid specificity early on. Consider creating utility classes like ```.u-text-right``` if you must do very temporary important or implementation specific changes.
+You should favour source order. To achieve this, keep your declarations short and generic. Avoid specificity early on. Consider creating utility classes like ```.u-text-right``` if you must do very temporary important or implementation specific changes. 
+
+Let's try to make it better, applying some CSS principles:
 
 ```html
 
