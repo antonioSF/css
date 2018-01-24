@@ -70,7 +70,7 @@ There are three different ways to apply CSS to an HTML document:
 
 <p style="color:red;">Example</p>
 ```
-> **Note**: This method must be avoided and only considered if there's a valid reason for it (e.g. CSS in JS).
+> **Note**: This method must be avoided and only considered if there's a valid reason for it (CSS in JS, ...).
 
 ---
 
@@ -352,7 +352,7 @@ Let's try to make it better, applying some CSS principles:
     background-color: red;
 }
 ````
-In the above example, we've **abstracted** the ```.btn``` properties keeping it generic. We've also used **specificity** and **extended** new features instead of modifying the base class ```.btn``. We've built the skeleton for our buttons and later extended them with theming/skin providing them reason and semantic (positive/negative). 
+In the above example, we've **abstracted** the ```.btn``` properties keeping it generic. We've also used **specificity** and **extended** new features instead of modifying the base class ```.btn```. We've built the skeleton for our buttons and later extended them with theming/skin providing them reason and semantic (positive/negative). 
 
 With this, we've already introduced some CSS principles like: 
 * **Object-Oriented CSS (OOCSS)**. 
@@ -366,8 +366,83 @@ With this, we've already introduced some CSS principles like:
 > * [CSpecificity - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
 > * [CSS Guidelines (2.2.5)](https://cssguidelin.es/#architectural-principles)
 
-## Methodologies
+---
 
+**[Back to top](#table-of-contents)**
+
+#### Mobile-first & media queries
+Having a mobile-first approach while architecting your CSS has enormous benefits to development.
+While it may be related to Responsive Web Design, mobile-first approach also allow us to better implement some best practices:
+
+* **DRY code**.
+* **Abstraction**.
+* **Short and generic declarations**.
+* **Scalability**.
+* **Maintainability**.
+* **Light-weight**.
+
+Using this approach and following CSS principles, developers can build powerful designs while keeping the source code **clean and lean**.
+
+Below is an example of a structure using the mobile-first approach. From top to bottom: generic to specific. 
+Using Media Queries we can target different widths/heights/resolutions/print.
+
+```css
+
+/*------------------------------------*\
+    #RESETS
+\*------------------------------------*/
+
+html { }
+
+....
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+.layout { }
+
+....
+
+/*------------------------------------*\
+    #SECTION
+\*------------------------------------*/
+
+.some-section { }
+
+...
+
+/*------------------------------------*\
+    #BUTTON
+\*------------------------------------*/
+
+.btn { }
+
+/* some modifier */
+.btn--submit { }
+
+...
+
+/*------------------------------------*\
+    #MEDIA QUERIES
+\*------------------------------------*/
+
+/* specific styles for bigger devices */
+
+```
+> **note**: Following this structure, your code will be a lot cleaner and error free. 
+Target one of the smallest device in the market (e.g. IPhone 5) and build from there.
+
+##### Media Queries
+
+##### References
+> * [Cascade and inheritance - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
+> * [CSpecificity - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+> * [CSS Guidelines (2.2.5)](https://cssguidelin.es/#architectural-principles)
+
+---
+
+**[Back to top](#table-of-contents)**
 
 ---
 
