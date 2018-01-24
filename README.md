@@ -22,11 +22,11 @@ Other Guides
 5. [Architecture](#architecture)
     * [The Cascade & Principles](#the-cascade--principles)
     * [Mobile first & media queries](#mobile-first--media-queries)
-6. Layout
-    * Positioning
-    * Floats
-    * Flexbox
-    * Grid
+6. [Layout](#layout)
+    * [Positioning](#positioning)
+    * [Floats](#floats)
+    * [Flexbox](#flexbox)
+    * [Grid](#grid)
 7. Methodologies
     * BEM
 8. Sass
@@ -474,13 +474,11 @@ Logical Operators:
 ```css
 
 /* target only screen media where browser width is bigger than 640px */
-
 @media only screen and (min-width: 640px) {
   .some-selector { }
 }
 
 /* target media where browser width is bigger than 1024px and smaller than 1440px */
-
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .some-selector { }
 }
@@ -488,7 +486,6 @@ Logical Operators:
 ...
 
 /* target only print media */
-
 @media print {
   .some-selector { }
 }
@@ -499,9 +496,12 @@ However, be careful not to bloat your code with the overuse of media queries. If
 
 
 ##### References
-> * [Cascade and inheritance - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
-> * [CSpecificity - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
-> * [CSS Guidelines (2.2.5)](https://cssguidelin.es/#architectural-principles)
+> * [Media queries - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries)
+> * [Using media queries - CSS | MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+> * [@media - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
+> * [Mobile-first CSS – mrmrs – Medium](https://medium.com/@mrmrs_/mobile-first-css-48bc4cc3f60f)
+> * [Mobile-first CSS – mrmrs – Medium](https://medium.com/@mrmrs_/mobile-first-css-48bc4cc3f60f)
+> * [How To Write Mobile-first CSS | Zell Liew](https://zellwk.com/blog/how-to-write-mobile-first-css/)
 
 ---
 
