@@ -27,8 +27,8 @@ Other Guides
     * [Floats](#floats)
     * [Flexbox](#flexbox)
     * [Grid](#grid)
-7. Methodologies
-    * BEM
+7. [Methodologies](#methodologies)
+    * [BEM](#bem)
 8. Sass
     * Syntax
     * Ordering
@@ -652,7 +652,7 @@ Syntax:
     ...
   </div>
 
-  <div class="[block__other-element]">
+  <div class="[block__element]">
     ...
   </div>
 </div>
@@ -713,7 +713,7 @@ Syntax:
   display: none;
 }
 
-.main-menu__item--active { }
+.menu__item--active { }
 ```
 
 > **Note**: You may disagree or not feel confortable about these usage. If that's the case, talk with the team, expose your obstacles and together find a mutual concession. These methodologies and naming conventions were created to help developers. They may be customized to the flavour of the team. The important note is to keep it clean, consistent and logical.
