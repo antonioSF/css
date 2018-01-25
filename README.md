@@ -623,10 +623,112 @@ However, be careful not to bloat your code with the overuse of media queries. If
 
 **[Back to top](#table-of-contents)**
 
----
-
 ## Layout
 
+---
+
+**[Back to top](#table-of-contents)**
+
+---
+
+## Methodologies
+CSS methodologies help developers **maintain and scale** the front-end as a set of small, isolated modules. Rather than as one massive lump of indivisible code. [SMACSS](https://smacss.com/) and [BEM](http://getbem.com/) are two of the most well known options.
+We'll focus on the later one - BEM - since it encapsulates code, which is crucial in today's Web Applications  context.
+
+
+#### BEM
+BEM - **Block Element Modifier** - started as a set of guidelines created by developers working at Yandex.
+BEM splits components classes into three groups:
+
+* **Block**: Root of the component;
+* **Element**: Element that depends upon the block;
+* **Modifier**: Changes the style of the block based on appearance, behavior or state.
+
+Syntax:
+```html
+
+<div class="[block block--modifier]">
+  <div class="[block__element block__element--modifier]">
+    ...
+  </div>
+
+  <div class="[block__other-element]">
+    ...
+  </div>
+</div>
+```
+
+```css
+
+[block] {
+  ...
+}
+
+[block__element] {
+  ...
+}
+
+[block__element--modifier] {
+  ...
+}
+```
+
+* Block name should be semantic and expressive.
+* Block strings are delimited with only one regular dash.
+* Elements are delimited with two (2) underscores (__);
+* Modifiers are delimited by two (2) hyphens (--).
+* JavaScript specific classes/ID's are prefixed by js- (e.g. ```js-menu```).
+
+```html
+
+<nav class="menu menu--visible js-menu">
+  <ul class="menu__list">
+    <li class="menu__item menu__item--active">
+      ...
+    </li>
+    <li class="menu__item">
+      <a class="menu__link">Click me</a>
+    </li>
+  </ul>
+</nav>
+```
+```css
+
+/* block */
+.menu { }
+
+/* elements */
+.menu__list { }
+
+.menu__item { }
+
+.menu__link { }
+
+/* modifiers */
+.menu--visible { 
+  display: block;
+}
+
+.menu--hidden { 
+  display: none;
+}
+
+.main-menu__item--active { }
+```
+
+> **Note**: You may disagree or not feel confortable about these usage. If that's the case, talk with the team, expose your obstacles and together find a mutual concession. These methodologies and naming conventions were created to help developers. They may be customized to the flavour of the team. The important note is to keep it clean, consistent and logical.
+
+##### References
+> * [BEM — Block Element Modifier](http://getbem.com/)
+> * [BEM](https://en.bem.info/)
+> * [BEM 101 | CSS-Tricks](https://css-tricks.com/bem-101/)
+> * [CSS Guidelines (2.2.5) - BEM like naming](https://cssguidelin.es/#bem-like-naming)
+> * [MindBEMding - Harry Roberts](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+> * [About HTML semantics and front-end architecture – Nicolas Gallagher](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
+> * [BEM and SMACSS: Advice From Developers Who've Been There — SitePoint](https://www.sitepoint.com/bem-smacss-advice-from-developers/)
+> * [SMACSS - Scalable and Modular Architecture for CSS](https://smacss.com/)
+
+---
 
 **[Back to top](#table-of-contents)**
 
