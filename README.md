@@ -16,6 +16,9 @@ Other Guides
 2. [Terminology](#terminology)
     * [Rule Declaration](#rule-declaration)
     * [Selectors](#selectors)
+    * [Naming Conventions](#naming-conventions)
+    * [Pseudo-classes](#pseudo-classes)
+    * [Pseudo-elements](#pseudo-elements)
     * [Properties](#properties)
 3. [Formating](#formating)
 4. [Comments](#comments)
@@ -29,12 +32,12 @@ Other Guides
     * [Grid](#grid)
 7. [Methodologies](#methodologies)
     * [BEM](#bem)
-8. Sass
-    * Syntax
-    * Ordering
-    * Variables
-    * Mixins
-    * Nested selectors
+8. [Sass](#sass)
+    * [Syntax](#syntax)
+    * [Ordering](#ordering)
+    * [Variables](#variables)
+    * [Mixins](#mixins)
+    * [Nested selectors](#nested-selectors)
 9. Frameworks
 10. [Best Practices](#best-practices)
 
@@ -121,7 +124,7 @@ That being said, you should also follow some rules:
 </nav>
 ```
 
-##### Naming Conventions
+#### Naming Conventions
 Naming conventions in CSS are hugely useful in making your code more strict, more transparent, and more informative. A good naming convention will tell you and your team:
 
 * what type of thing a class does;
@@ -167,7 +170,7 @@ Avoid camel case and underscores:
 ```
 For a more detailed and complex naming approach, read about the use of [BEM Methodology](#bem).
 
-##### Pseudo-classes
+#### Pseudo-classes
 A pseudo-class  **specifies a special state** of the selected element(s). For example, :hover can be used to change a button's color when the user hovers over it.
 
 ```html
@@ -189,7 +192,7 @@ A pseudo-class is always prefixed by (:)  ```:hover```, ```:active```, ```:focus
 
 You can view a full list of pseudo-classes [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
 
-##### Pseudo-elements
+#### Pseudo-elements
 A pseudo-element lets you style a specific part of the selected element(s). For example, ::after can be used to add cosmetic content to an element.
 
 ```html
@@ -727,6 +730,142 @@ Syntax:
 > * [About HTML semantics and front-end architecture – Nicolas Gallagher](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
 > * [BEM and SMACSS: Advice From Developers Who've Been There — SitePoint](https://www.sitepoint.com/bem-smacss-advice-from-developers/)
 > * [SMACSS - Scalable and Modular Architecture for CSS](https://smacss.com/)
+
+---
+
+**[Back to top](#table-of-contents)**
+
+## Saas
+A **CSS preprocessor** helps you write maintainable, future-proof code and it will seriously reduce the amount of CSS you have to write. There are many CSS preprocessors to choose from, however most CSS preprocessors will add some features that don't exist in pure CSS. **Sass** lets you use features like variables, nesting, mixins, inheritance, etc.
+
+#### Syntax
+* Use the .scss syntax.
+* Indent with the same two (2) spaces, and also leave a blank line before and after the nested ruleset.
+
+#### Ordering
+* Partial files start with an underscore (e.g. ```_partial.scss```).
+* Partial files are used with the @import directive and comes first by order.
+```scss
+
+// here we are importing _reset.scss and _base.scss
+@import 'reset';
+@import 'base';
+
+.content {
+  ...
+}
+```
+* Keep variables and mixins at the top of your files.
+```scss
+
+$font-stack: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$primary-color: #333;
+
+....
+
+.some-element {
+  font-family: $font-stack;
+  font-size: 1rem;
+  color: $primary-color;
+}
+```
+* Standard declarations goes first, then @includes and only then, if necessary, nested selectors.
+```scss
+
+.some-element {
+  display: block;
+  position: relative;
+  ...
+  @include border-radius(10px);
+}
+```
+* Nested selectors. If necessary, go last and nothing comes after them.
+
+```scss
+
+.menu {
+  display: block;
+  position: relative;
+  @include border-radius(10px);
+
+  .item {
+    color: white;
+  }
+}
+```
+#### Variables
+Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the ```$``` symbol to make something a variable.
+
+* Again, keep variables at the top of your files.
+* Use dash-cased variable names over camelCased or snake_cased.
+```scss
+
+//don't
+$primaryColor: #333;
+$primary_color: #333;
+
+//do
+$primary-color: #333;
+```
+
+#### Mixins
+A mixin lets you make groups of CSS declarations that you want to reuse throughout your site. You can pass in values to make your mixin more flexible. After you create your mixin, you can then use it as a CSS declaration starting with ```@include``` followed by the name of the mixin.
+
+* Again, keep mixins at the top of your files.
+```scss
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+...
+
+
+.some-element {
+  display: block;
+  position: relative;
+  @include border-radius(2px);
+}
+```
+> **Note**: Mixins should be used to DRY up your code, add clarity, or abstract complexity.
+
+
+#### Nested selectors
+Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.
+* Avoid Nesting due to specificity.
+* Do not nest selectors more than three levels deep.
+```scss
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      //stop nesting
+    }
+  }
+}
+```
+
+> **Note**: As a rule, if a selector will work without it being nested then do not nest it.
+
+> * [Sass: Syntactically Awesome Style Sheets](http://sass-lang.com/)
+> * [6 Current Options for CSS Preprocessors — SitePoint](https://www.sitepoint.com/6-current-options-css-preprocessors/)
+> * [CSS Guidelines (2.2.5) - Misconceptions](https://cssguidelin.es/#misconceptions)
+> * [CSS preprocessor - Glossary | MDN](https://developer.mozilla.org/en-US/docs/Glossary/CSS_preprocessor)
+
+---
+
+**[Back to top](#table-of-contents)**
+
+## Frameworks
 
 ---
 
