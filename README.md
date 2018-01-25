@@ -735,7 +735,7 @@ Syntax:
 
 **[Back to top](#table-of-contents)**
 
-## Saas
+## Sass
 A **CSS preprocessor** helps you write maintainable, future-proof code and it will seriously reduce the amount of CSS you have to write. There are many CSS preprocessors to choose from, however most CSS preprocessors will add some features that don't exist in pure CSS. **Sass** lets you use features like variables, nesting, mixins, inheritance, etc.
 
 #### Syntax
