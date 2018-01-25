@@ -38,7 +38,7 @@ Other Guides
     * [Variables](#variables)
     * [Mixins](#mixins)
     * [Nested selectors](#nested-selectors)
-9. Frameworks
+9. [Frameworks](#frameworks)
 10. [Best Practices](#best-practices)
 
 ## Introduction
@@ -854,8 +854,9 @@ nav {
 }
 ```
 
-> **Note**: As a rule, if a selector will work without it being nested then do not nest it.
+> **Note**: As a rule, if a selector work without it being nested then do not nest it.
 
+##### References
 > * [Sass: Syntactically Awesome Style Sheets](http://sass-lang.com/)
 > * [6 Current Options for CSS Preprocessors — SitePoint](https://www.sitepoint.com/6-current-options-css-preprocessors/)
 > * [CSS Guidelines (2.2.5) - Misconceptions](https://cssguidelin.es/#misconceptions)
@@ -866,6 +867,28 @@ nav {
 **[Back to top](#table-of-contents)**
 
 ## Frameworks
+The aim of CSS frameworks is to provide a common structure so that developers don't have to redo it from scratch and can reuse the code provided. They also help at browser consistency and to avoid common errors. In this way, frameworks allow us to cut out much of the work and save a lot of time. 
+* There's no need to reinvent the wheel.
+
+That being said, in the beginning of a new project you should make these questions:
+* Does this project require the usage of a CSS Framework? Why?
+* Who will maintain the code?
+* What is the best CSS framework for this project?
+* Do we have to use the full Framework? Or, can you just use some parts of it, like resets, grids, etc.
+
+CSS Frameworks can help a lot in the development process, maintenance and scalability of projects. However they can also be an overkill for small projects. Be carefull and study each project requirements.
+
+##### Five CSS Frameworks:
+* [Bootstrap](http://getbootstrap.com/)
+* [Foundation - Zurb](https://foundation.zurb.com/)
+* [Bulma](https://bulma.io/)
+* [Ulkit](https://getuikit.com/)
+* [Semantic UI](https://semantic-ui.com/)
+
+
+##### References
+> * [Top 5 Most Popular CSS Frameworks that You Should Pay Attention to in 2017](https://hackernoon.com/top-5-most-popular-css-frameworks-that-you-should-pay-attention-to-in-2017-344a8b67fba1)
+> * [What are Frameworks? 22 Best Responsive CSS Frameworks for Web Design](https://www.awwwards.com/what-are-frameworks-22-best-responsive-css-frameworks-for-web-design.html)
 
 ---
 
