@@ -108,7 +108,7 @@ header {
 }
 ```
 
-That being said, you should follow some rules:
+That being said, you should also follow some rules:
 
 * Do not use ID's.
 * Avoid referencing [data-*].
@@ -165,6 +165,7 @@ Avoid camel case and underscores:
 
 .main_menu { }
 ```
+For a more detailed and complex naming approach, read about the use of [BEM Methodology](#bem).
 
 #### Properties
 Are human-readable identifiers that indicate which stylistic features (e.g. font, width, background color) you want to change. Properties are key-value pairs, and a rule declaration can contain one or more property declarations.
