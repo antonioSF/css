@@ -867,16 +867,14 @@ nav {
 **[Back to top](#table-of-contents)**
 
 ## Frameworks
-The aim of CSS frameworks is to provide a common structure so that developers don't have to redo it from scratch and can reuse the code provided. They also help at browser consistency and to avoid common errors. In this way, frameworks allow us to cut out much of the work and save a lot of time. 
-* There's no need to reinvent the wheel.
+The aim of CSS frameworks is to provide a common structure so that developers don't have to redo it from scratch and can reuse the code provided. They also help at consistency and avoid common errors. In that way, frameworks allow us to cut out much of the work and save a lot of time. 
+There's no need to reinvent the wheel.
 
 That being said, in the beginning of a new project you should make these questions:
 * **Does this project require the usage of a CSS Framework? Why?**
 * **Who's going to maintain the code?**
 * **What is the best CSS framework for this project?**
 * **Do we have to use the full framework? Or, can we just use some parts of it (resets, grids, ...).**
-
-> **Note**: CSS Frameworks can help a lot in the development process, maintenance and scalability of projects. However they can also be an overkill for small projects. Be carefull and study each project requirements.
 
 ##### Five CSS Frameworks:
 * [Bootstrap](http://getbootstrap.com/)
@@ -885,6 +883,7 @@ That being said, in the beginning of a new project you should make these questio
 * [Ulkit](https://getuikit.com/)
 * [Semantic UI](https://semantic-ui.com/)
 
+> **Note**: CSS Frameworks can help a lot in the development process, maintenance and scalability of projects. However they can also be an overkill for small projects. Be carefull and study each project requirements.
 
 ##### References
 > * [Top 5 Most Popular CSS Frameworks that You Should Pay Attention to in 2017](https://hackernoon.com/top-5-most-popular-css-frameworks-that-you-should-pay-attention-to-in-2017-344a8b67fba1)
