@@ -178,11 +178,11 @@ A pseudo-class  **specifies a special state** of the selected element(s). For ex
 ```css
 
 .btn {
-  background-color: green;
+  [property]: [value];
 }
 
 .btn:hover {
-  background-color: white;
+  [property]: [other value];
 }
 ```
 A pseudo-class is always prefixed by (:)  ```:hover```, ```:active```, ```:focus```,  ```valid```,  etc.
@@ -200,11 +200,7 @@ A pseudo-element lets you style a specific part of the selected element(s). For 
 ```css
 
 .btn::after {
-  content: '';
-  width: 100%;
-  height: 2px;
-  margin-top: 2px;
-  background-color: green;
+  [property]: [value];
 }
 ```
 
@@ -225,7 +221,7 @@ Are human-readable identifiers that indicate which stylistic features (e.g. font
 ```
 
 There are so many CSS properties that it can be overwhelming. 
-You can follow this lists for reference:
+You can follow these lists for reference:
 * [Properties | CSS-Tricks](https://css-tricks.com/almanac/properties/)
 * [CSS Properties Index · Jens Oliver Meiert](https://meiert.com/en/indices/css-properties/)
 * [CSS reference - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
