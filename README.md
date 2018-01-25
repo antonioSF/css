@@ -871,12 +871,12 @@ The aim of CSS frameworks is to provide a common structure so that developers do
 * There's no need to reinvent the wheel.
 
 That being said, in the beginning of a new project you should make these questions:
-* Does this project require the usage of a CSS Framework? Why?
-* Who will maintain the code?
-* What is the best CSS framework for this project?
-* Do we have to use the full Framework? Or, can you just use some parts of it, like resets, grids, etc.
+* **Does this project require the usage of a CSS Framework? Why?**
+* **Who's going to maintain the code?**
+* **What is the best CSS framework for this project?**
+* **Do we have to use the full framework? Or, can we just use some parts of it (resets, grids, ...).**
 
-CSS Frameworks can help a lot in the development process, maintenance and scalability of projects. However they can also be an overkill for small projects. Be carefull and study each project requirements.
+> **Note**: CSS Frameworks can help a lot in the development process, maintenance and scalability of projects. However they can also be an overkill for small projects. Be carefull and study each project requirements.
 
 ##### Five CSS Frameworks:
 * [Bootstrap](http://getbootstrap.com/)
