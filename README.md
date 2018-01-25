@@ -167,6 +167,51 @@ Avoid camel case and underscores:
 ```
 For a more detailed and complex naming approach, read about the use of [BEM Methodology](#bem).
 
+##### Pseudo-classes
+A pseudo-class  **specifies a special state** of the selected element(s). For example, :hover can be used to change a button's color when the user hovers over it.
+
+```html
+
+<button class="btn">Click me</button>
+```
+
+```css
+
+.btn {
+  background-color: green;
+}
+
+.btn:hover {
+  background-color: white;
+}
+```
+A pseudo-class is always prefixed by (:) - ```:hover```, ```:active```, ```:focus```,  ```valid```,  etc.
+
+You can view a full list of pseudo-classes [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
+
+##### Pseudo-elements
+A pseudo-element lets you style a specific part of the selected element(s). For example, ::after can be used to add cosmetic content to an element.
+
+```html
+
+<button class="btn">Click me</button>
+```
+
+```css
+
+.btn::after {
+  content: '';
+  width:100%;
+  height:2px;
+  margin-top:2px;
+  background-color: green;
+}
+```
+
+Although, since CSS2, browsers accept one colon (:) ```:pseudo-element```, you should use CSS3 two colons (::) ```::pseudo-element``` to avoid confusion with pseudo-classes.
+
+You can view a full list of pseudo-elements [here](https://developer.mozilla.org/en-US/docs/Web/CSS/pseudo-elements).
+
 #### Properties
 Are human-readable identifiers that indicate which stylistic features (e.g. font, width, background color) you want to change. Properties are key-value pairs, and a rule declaration can contain one or more property declarations.
 
@@ -178,6 +223,15 @@ Are human-readable identifiers that indicate which stylistic features (e.g. font
     color: red;
 }
 ```
+
+##### References
+> * [Selectors - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors)
+> * [CSS Guidelines (2.2.5) - Selectors](https://cssguidelin.es/#css-selectors)
+> * [CSS Guidelines (2.2.5) - Naming Conventions](https://cssguidelin.es/#naming-conventions)
+> * [Naming UI components in OOCSS](https://csswizardry.com/2014/03/naming-ui-components-in-oocss/)
+> * [Pseudo-classes - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+> * [Pseudo-elements - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/pseudo-elements)
+> * [CSS reference - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
 ---
 
