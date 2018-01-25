@@ -91,7 +91,7 @@ A Rule declaration or **ruleset** is the name given to a **selector** (or a grou
 ```
 
 #### Selectors
-Are patterns that reference some elements in the DOM tree. Selectors can match HTML elements, as well as an element's class, ID, or any of its attributes.
+Are patterns that reference some elements in the DOM tree. Selectors can match HTML elements, as well as an element's class, ID, or any of its attributes. 
 
 ```css
 
@@ -107,6 +107,65 @@ header {
     /* ... */
 }
 ```
+
+That being said, you should follow some rules:
+
+* Do not use ID's.
+* Avoid referencing [data-*].
+* Prefer classes.
+* Name your HTML classes with meaning and reason. Their intent must be clear.
+ ```html
+
+<nav class="menu">
+  ...
+</nav>
+```
+
+##### Naming Conventions
+Naming conventions in CSS are hugely useful in making your code more strict, more transparent, and more informative. A good naming convention will tell you and your team:
+
+* what type of thing a class does;
+* where a class can be used;
+* what (else) a class might be related to.
+
+Unless you have a valid reason for it, strings should be delimited with a hyphen (-):
+
+ ```html
+
+<nav class="main-menu">
+  ...
+</nav>
+```
+
+```css
+
+.main-menu { }
+```
+
+Avoid camel case and underscores:
+
+ ```html
+
+<nav class="mainMenu">
+  ...
+</nav>
+```
+```css
+
+.mainMenu { }
+```
+
+ ```html
+
+<nav class="main_menu">
+  ...
+</nav>
+```
+```css
+
+.main_menu { }
+```
+
 #### Properties
 Are human-readable identifiers that indicate which stylistic features (e.g. font, width, background color) you want to change. Properties are key-value pairs, and a rule declaration can contain one or more property declarations.
 
