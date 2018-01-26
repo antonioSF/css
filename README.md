@@ -710,8 +710,8 @@ Other properties like  ```top```, ```left```, ```bottom```, ```right``` define t
 
 ##### Display
 A CSS box element can be of many types. The most basic ones are:
-* **block**: is defined as a box that's stacked upon other boxes. The whole box model as described above applies to block boxes.
-* **inline**: is the opposite of a block box. It flows with the document's text.
+* **block**: Is defined as a box that's stacked upon other boxes. The whole box model as described above applies to block boxes.
+* **inline**: Is the opposite of a block box. It flows with the document's text.
 * **inline-block**: Is something in between the first two.
 
 ```html
@@ -745,11 +745,11 @@ A CSS box element can be of many types. The most basic ones are:
 The position property sets the behaviour of a CSS box element in the document - think of it as different types of layers. 
 
 The position property can have the following values:
-* **static**: is the default that every box gets.
-* **relative**: it means the box is relative to its parent and to its siblings and other elements (any property value given to the box is relative to its parent).
-* **absolute**: it means the box is absolute to its nearest positioned ancestor (any property value given to the box **is absolute to its nearest positioned ancestor**).
-* **fixed**:  it means the box is absolute to the browser viewport (any property value given to the box **is absolute to browser viewport**).
-* **sticky**: it means the box is relative until the browser is scrolled to a certain point (10px from the top viewport) and then behaves as a fixed element.
+* **static**: Is the default that every box gets.
+* **relative**: It means the box is relative to its parent and to its siblings and other elements (any property value given to the box is relative to its parent).
+* **absolute**: It means the box is absolute to its nearest positioned ancestor (any property value given to the box **is absolute to its nearest positioned ancestor**).
+* **fixed**:  It means the box is absolute to the browser viewport (any property value given to the box **is absolute to browser viewport**).
+* **sticky**: It means the box is relative until the browser is scrolled to a certain point (10px from the top viewport) and then behaves as a fixed element.
 
 If with relative/static position we are in X - Y axis. With absolute and fixed positions we enter the Z axis. 
 
@@ -813,7 +813,139 @@ If with relative/static position we are in X - Y axis. With absolute and fixed p
 **[Back to top](#table-of-contents)**
 
 #### Floats
+The float property has become one of the most commonly used tools for creating multiple column layouts on webpages. 
 
+The float property can have one of the following values:
+* **left**: The element floats to the left of its parent.
+* **right**: The element floats to the right of its parent.
+* **none**: The element does not float.
+* **inherit**: The element inherits the float value of its parent.
+
+```html
+
+<div class="block-figure">
+  ...
+</div>
+
+<div class="block-text">
+  ...
+</div>
+```
+
+```css
+
+.block-figure {
+  position: relative;
+  width:  40%;
+  height: 200px;
+  float: left;
+}
+
+.block-text {
+  position: relative;
+  width: 60%;
+  min-height: 150px;
+  height: auto;
+  overflow: hidden;
+}
+
+```
+In the above example, we set a **```float: left```** to the selector ```.block-figure``` stucking it to the left hand side of its parent container (```<body>```, in this case). Any content that comes below the floated element (```.block-text```, in this case) in the normal layout flow **will now wrap around it, filling up the space to the right hand side of it** as far up as the top of the floated element. There, it will stop.
+
+If we change the value of float to **```float: right```**, it will stuck the element to the right of its container and the content after **will fill the space to the left hand side of it**.
+
+Now, imagine you wanted to build a 12 column grid system:
+
+```html
+
+<div class="col col--12">
+  ...
+</div>
+
+<div class="col col--6">
+  ...
+</div>
+
+<div class="col col--6">
+  ...
+</div>
+
+<div class="col col--4">
+  ...
+</div>
+
+<div class="col col--4">
+  ...
+</div>
+
+<div class="col col--4">
+  ...
+</div>
+```
+
+```css
+
+.col {
+  position: relative;
+  float: left;
+}
+
+.col--12 {
+  width: 100%;
+}
+
+.col--6 {
+  width: 50%;
+}
+
+.col--4 {
+  width: 33.333337%;
+}
+
+```
+... and so on. You then apply margins and paddings to the columns. 
+
+Having all elements in a document stacking floats one after another may not be desirable. That's when the ```clear``` property comes into play.
+
+##### The clear property
+The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them. The clear property applies to both floating and non-floating elements.
+
+The clear property can have one of the following values:
+* **none**: The element is not moved down to clear past floating elements.
+* **both**: The element is moved down to clear past both left and right floats.
+* **left**: The element is moved down to clear past left floats.
+* **right**: The element is moved down to clear past right floats.
+* **inline-start**: The element is moved down to clear floats on start side of its containing block, that is the left floats on ltr scripts and the right floats on rtl scripts.
+* **inline-end**: The element is moved down to clear floats on end side of its containing block, that is the right floats on ltr scripts and the left floats on rtl scripts.
+
+In the Example below, we want the first column ```col--4``` element left alone on the left side of the container. So we want the column that cames after it, to clear left.
+
+```html
+
+<div class="col col--4">
+  ...
+</div>
+
+<div class="col col--6 col--clear-left">
+    ...
+</div>
+
+<div class="col col-6">
+    ...
+</div>
+```
+
+```css
+
+...
+
+.col--clear-left {
+    clear: left;
+}
+```
+##### References
+> * [Floats - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats)
+> * [clear - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
 
 ---
 
