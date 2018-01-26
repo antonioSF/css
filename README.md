@@ -1015,16 +1015,13 @@ In the above example, just like that, we have set how and where our items inside
   * space-between - lines evenly distributed;
   * space-around - lines evenly distributed with equal space around each line.
 
-> **Note**: **flex-flow** is the shorthand syntax for [flex direction] and [flex-wrap]:
-  * In our above example we could just do ```flex-flow: row nowrap;```.
+> **Note**: **flex-flow** is the shorthand syntax for [flex direction] and [flex-wrap] - in our above example we could just do ```flex-flow: row nowrap;```.
 
-Now, let's say in the desktop version we wanted to change the items order (put the navigation bar on the left and the logo on the right):
+Now, let's say, in the desktop version, we wanted to change the items order (put the navigation bar on the left and the logo on the right):
 
 ```css
 
 @media only screen and (min-width: 64rem) {
-  
-
   .main-header__logo {
     order: 2;
   }
@@ -1063,6 +1060,11 @@ let's see what properties and their values on the children do:
 As you can see, Flexbox is ideal to define components and smaller *inner* layouts. While the [Grid](#grid), as we´re going to see, is perfect for larger *outer* layouts, prototype skeletons, etc.
 
 ##### References
+> * [A Complete Guide to Flexbox | CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+> * [Basic concepts of flexbox - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+> * [A visual guide to css3 flexbox properties - scotch](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)
+> * [CSS - flexbox](http://learnlayout.com/flexbox.html)
+> * [Learn CSS Flexbox in 5 Minutes – freeCodeCamp](https://medium.freecodecamp.org/learn-css-flexbox-in-5-minutes-b941f0affc34)
 
 ---
 
