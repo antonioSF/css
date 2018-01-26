@@ -903,7 +903,7 @@ Now, imagine you wanted to build a 12 column grid system:
 }
 
 ```
-... and so on. You then apply margins and paddings to the columns. 
+... and so on. You then can apply margins and paddings to the columns. 
 
 Having all elements in a document stacking floats one after another may not be desirable. That's when the ```clear``` property comes into play.
 
@@ -918,7 +918,7 @@ The clear property can have one of the following values:
 * **inline-start**: The element is moved down to clear floats on start side of its containing block, that is the left floats on ltr scripts and the right floats on rtl scripts.
 * **inline-end**: The element is moved down to clear floats on end side of its containing block, that is the right floats on ltr scripts and the left floats on rtl scripts.
 
-In the Example below, we want the first column ```col--4``` element left alone on the left side of the container. So we want the column that cames after it, to clear left.
+In the Example below, we want the first column ```col--4``` element left alone on the left side of the container. So the column that cames after it, must clear left.
 
 ```html
 
@@ -946,6 +946,132 @@ In the Example below, we want the first column ```col--4``` element left alone o
 ##### References
 > * [Floats - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats)
 > * [clear - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
+
+---
+
+**[Back to top](#table-of-contents)**
+
+#### Flexbox
+The Flexbox layout - officially called CSS Flexible Box Layout Module by the [W3C](https://www.w3.org/TR/css-flexbox/)) provides a more efficient way to develop responsive layouts. Improving how to align and distribute space among items in a container. It also solves some *hacks* had to do in the past, like vertical align items.
+
+It also fits perfectly in a mobile first approach and the [BEM methodology](#bem). Flexbox focus itself in the **container/parent element** giving it enough power to **alter its children items width/height and order** to best fill the available space. 
+
+For example, let's create a page main header. This header, will hold a company logo on the left and a navigation bar on the right. Pretty standard stuff:
+
+```html
+
+<header class="main-header">
+  <div class="main-header__logo">
+    ...
+  </div>
+
+  <nav class="main-header__navigation">
+    ...
+  </nav>
+</header>
+```
+```css
+
+.main-header {
+  ...
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+```
+In the above example, just like that, we have set how and where our items inside the main header will be placed. let's see what flexbox properties and their values on the container do:
+
+* **display**:
+  * Flex (default) - Defines a block flex container;
+  * inline-flex - Defines an inline flex container;
+* **flex-direction** (establishes the X or Y axis to be used):
+  * row (default) - horizontal rows left to right;
+  * row-reverse - horizontal rows right to left;
+  * column - vertical columns top to bottom;
+  * column-reverse - vertical columns bottom to top;
+* **flex-wrap** (establishes if items are in same line or not):
+  * nowrap (default) - all items in one line;
+  * wrap - items wrapped onto multiple lines, from top to bottom;
+  * wrap-reverse - items wrapped onto multiple lines, from bottom to top;
+* **justify-content** (establishes the items alignment along the **main axis**):
+  * flex-start (default) - items are packed toward the start line (left or top depending on flex-direction);
+  * flex-end - items are packed toward to end line;
+  * center - items are centered along the line;
+  * space-between - items are evenly distributed in the line; first item is on the start line, last item on the end line;
+  * space-around - items are evenly distributed in the line with equal space around them;
+  * space-evenly - items are distributed so that the spacing between any two items (and the space to the edges) is equal;
+* **align-items** (Defines the default behaviour for how flex items are laid out along the **cross axis** on the current line):
+  * stretch (default) - stretch to fill the container.
+  * flex-start - cross-start margin edge of the items is placed on the cross-start line;
+  * flex-end - cross-end margin edge of the items is placed on the cross-end line;
+  * center - items are centered in the cross-axis;
+  * baseline - items are aligned such as their baselines align;
+* **align-content** (This aligns a flex container's lines within when there is extra space in the cross-axis)
+  * stretch (default) - lines stretch to take up the remaining space;
+  * flex-start - lines packed to the start of the container;
+  * flex-end - lines packed to the end of the container;
+  * center - lines packed to the center of the container;
+  * space-between - lines evenly distributed;
+  * space-around - lines evenly distributed with equal space around each line.
+
+> **Note**: **flex-flow** is the shorthand syntax for [flex direction] and [flex-wrap]:
+  * In our above example we could just do ```flex-flow: row nowrap;```.
+
+Now, let's say in the desktop version we wanted to change the items order (put the navigation bar on the left and the logo on the right):
+
+```css
+
+@media only screen and (min-width: 64rem) {
+  
+
+  .main-header__logo {
+    order: 2;
+  }
+
+  .main-header__navigation [
+    order: 1;
+  }
+
+}
+```
+
+By default, flex items are laid out in the source order. However, the ```order``` property controls the order in which they appear in the flex container. 
+
+With that we just change the order items in our main header for desktop devices.
+
+let's see what properties and their values on the children do:
+* **order** (controls the order in which they appear in the flex container):
+  * 0 (default) - takes an [integer] value;
+* **flex-grow** (defines the ability for a flex item to grow):
+  * 0 (default) - takes an [integer] value;
+* **flex-shrink** (This defines the ability for a flex item to shrink):
+   * 0 (default) - takes an [integer] value;
+* **flex-basis** (defines the default size of an element before the remaining space is distributed):
+   * auto (default);
+   * [length] - e.g. ```20%```,  ````10rem```, etc.;
+* **align-self** (allows the default alignment to be overridden for individual items):
+  * auto;
+  * flex-start;
+  * flex-end;
+  * center;
+  * baseline;
+  * stretch;
+
+> **Note**: **flex** is the shorthand syntax for [flex-grow], [flex-shrink] and [flex-basis] - last two are optional. Default is ```flex: 0 1 auto;```.
+
+As you can see, Flexbox is ideal to define components and smaller *inner* layouts. While the [Grid](#grid), as we´re going to see, is perfect for larger *outer* layouts, prototype skeletons, etc.
+
+##### References
+
+---
+
+**[Back to top](#table-of-contents)**
+
+## Grid
+
+
+##### References
 
 ---
 
