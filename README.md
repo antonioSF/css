@@ -704,7 +704,9 @@ Notice the margin property - we specified all 4 margins. In this case, we should
   padding: 25px; 
 }
 ```
-> **Note**: Shorthand syntax should be avoided on very large projects. However, as everything, sometimes makes total sense to use them, choose wisely. 
+> **Note**: Shorthand syntax should be avoided on very large projects. However, as everything, sometimes makes total sense to use them, choose wisely.
+
+Other properties like  ```top```, ```left```, ```bottom```, ```right``` define the distance of a box from its parent/browser viewport. Since the default distance axis -| from a box to it's parent or browser viewport is left/right (-), top/bottom (|), that means each box, by default, start at a distance ```left: 0px;``` and ```top: 0px;``` from the browser viewport.
 
 ##### Display
 A CSS box element can be of many types. The most basic ones are:
@@ -745,10 +747,76 @@ The position property sets the behaviour of a CSS box element in the document - 
 The position property can have the following values:
 * **static**: is the default that every box gets.
 * **relative**: it means the box is relative to its parent and to its siblings and other elements (any property value given to the box is relative to its parent).
-* **absolute**:
-* **fixed**:
-* **sticky**:
+* **absolute**: it means the box is absolute to its nearest positioned ancestor (any property value given to the box **is absolute to its nearest positioned ancestor**).
+* **fixed**:  it means the box is absolute to the browser viewport (any property value given to the box **is absolute to browser viewport**).
+* **sticky**: it means the box is relative until the browser is scrolled to a certain point (10px from the top viewport) and then behaves as a fixed element.
+
+If with relative/static position we are in X - Y axis. With absolute and fixed positions we enter the Z axis. 
+
+```html
+<header class="main-header">
+</header>
+
+...
+
+<section class="block">
+  <button class="btn btn--absolute">scroll down</button>
+</section>
+```
+
+```css
+/*
+ * we should omit [top and left] properties since its default values are 0px,
+ * but for the purpose of the exercise we're keeping it.
+ */
+.main-header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+.block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  display:block;
+  min-width: 150px;
+  width: auto;
+  min-height: 60px;
+  height: auto;
+  padding: 7px 15px;
+}
+
+.btn--absolute {
+  position: absolute;
+  bottom: 50px;
+  right: 2%;
+  z-index: 0;
+}
+```
+
+> **Note** At first, it might be overwhelming to deal specially with absolute positioning. Do experiments  with different types of positions and how they correlate. 
+
+> **Note** As a rule, in real projects, **avoid the use of absolute(!) and fixed elements** as they can **break** and behave quite different in browsers (specially in mobile browsers).
+
+##### References
+> * [Positioning - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+
 ---
+
+**[Back to top](#table-of-contents)**
+
+#### Floats
+
+
+---
+
 **[Back to top](#table-of-contents)**
 
 ## Methodologies
