@@ -331,10 +331,10 @@ Having a standard way of writing CSS provides effiency across development within
     background-color: green;
 }
 ```
-* Use dashes over camelCasing in class names.
+* In general, if there's not a real intent, use dashes over camelCasing in class names.
 ```css
 
-/* bad */
+/* wrong */
 .fooBar {
     display: block;
 }
@@ -640,7 +640,7 @@ Techniques to style layouts are essential so you can proper build web pages that
 Every element in a web document is represented as a **rectangular box**. How you style and position this boxes will affect the layout, the child elements and their siblings. Think of it as a *puzzle*. 
 
 The most basic properties to style the layout of a box are:
-* **width** and **height**: these can have unit values in the form of pixels (1024px), percentages (100%) and virtual widths/heights (100vw/100vh).
+* **width**/**height**: these can have unit values in the form of pixels (1024px), percentages (100%) and virtual width/height (100vw/100vh).
 * **padding**: refers to the inner margin of a CSS box.
 * **margin**: refers to the space surrounding a CSS box.
 * **border**: The border sits between the outer edge of the padding and the inner edge of the margin.
@@ -673,7 +673,7 @@ In the following example, we'll name our boxes as block elements:
   border: 1px solid red;
 }
 ```
-In the above example, we used relative units for width/height. Percent (% - relative to their parent) for the width. We then apply a virtual height to the boxes (vh - relative to browser height). 
+In the above example, we used relative units for width/height. Percentage (% - relative to their parent) for the width. We then apply a virtual height to the boxes (vh - relative to browser height). 
 
 Notice the margin property - we specified all 4 margins. In this case, we should just use the shorthand syntax ```margin: 50px auto;``` . Margin as well as padding shorthand syntax goes like this:
 
@@ -685,7 +685,7 @@ Notice the margin property - we specified all 4 margins. In this case, we should
 
 /* 
  * if you want to horizontaly center an element
- * you can give them left/right margins automatic values
+ * you can give left/right margins automatic values
  */
 [element] {
   margin: 50px auto 50px auto; 
@@ -706,7 +706,7 @@ Notice the margin property - we specified all 4 margins. In this case, we should
 ```
 > **Note**: Shorthand syntax should be avoided on very large projects. However, as everything, sometimes makes total sense to use them, choose wisely.
 
-Other properties like  ```top```, ```left```, ```bottom```, ```right``` define the distance of a box from its parent/browser viewport. Since the default distance axis -| from a box to it's parent or browser viewport is left/right (-), top/bottom (|), that means each box, by default, start at a distance ```left: 0px;``` and ```top: 0px;``` from the browser viewport.
+Other properties like  ```top```, ```left```, ```bottom```, ```right``` define the distance of a box from its parent/browser viewport. Since the default distance axis -| from a box to it's parent or browser viewport is left-to-right (-), top-to-bottom (|), that means each box, by default, starts at a distance ```left: 0px;``` and ```top: 0px;``` from the browser viewport.
 
 ##### Display
 A CSS box element can be of many types. The most basic ones are:
@@ -785,7 +785,7 @@ If with relative/static position we are in X - Y axis. With absolute and fixed p
 }
 
 .btn {
-  display:block;
+  display: block;
   min-width: 150px;
   width: auto;
   min-height: 60px;
@@ -1104,7 +1104,7 @@ That being said, in the beginning of a new project you should make these questio
 
 * @extend should be avoided.
 
-* Avoid @import.
+* Avoid @import in CSS production files.
 
 * Only use !important proactively, not reactively.
 
