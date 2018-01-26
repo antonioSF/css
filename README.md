@@ -952,7 +952,7 @@ In the Example below, we want the first column ```col--4``` element left alone o
 **[Back to top](#table-of-contents)**
 
 #### Flexbox
-The Flexbox layout - officially called CSS Flexible Box Layout Module by the [W3C](https://www.w3.org/TR/css-flexbox/)) provides a more efficient way to develop responsive layouts. Improving how to align and distribute space among items in a container. It also solves some *hacks* had to do in the past, like vertical align items.
+The Flexbox layout - officially called CSS Flexible Box Layout Module by the [W3C](https://www.w3.org/TR/css-flexbox/)) provides a more efficient way to develop responsive layouts.
 
 It also fits perfectly in a mobile first approach and the [BEM methodology](#bem). Flexbox focus itself in the **container/parent element** giving it enough power to **alter its children items width/height and order** to best fill the available space. 
 
