@@ -26,6 +26,7 @@ Other Guides
     * [The Cascade & Principles](#the-cascade--principles)
     * [Mobile first & Media Queries](#mobile-first--media-queries)
 6. [Layout](#layout)
+    * [The Box Model](#the-box-model)
     * [Positioning](#positioning)
     * [Floats](#floats)
     * [Flexbox](#flexbox)
@@ -627,12 +628,128 @@ However, be careful not to bloat your code with the overuse of media queries. If
 **[Back to top](#table-of-contents)**
 
 ## Layout
+Techniques to style layouts are essential so you can proper build web pages that are both semantic and have a beautiful responsive design. That being said, you should master the following concepts:
+* **Box Model**.
+* **Positioning**.
+* **Floats**.
+* **Flexbox**.
+* **Grid**.
 
+
+#### The Box Model
+Every element in a web document is represented as a **rectangular box**. How you style and position this boxes will affect the layout, the child elements and their siblings. Think of it as a *puzzle*. 
+
+The most basic properties to style the layout of a box are:
+* **width** and **height**: these can have unit values in the form of pixels (1024px), percentages (100%) and virtual widths/heights (100vw/100vh).
+* **padding**: refers to the inner margin of a CSS box.
+* **margin**: refers to the space surrounding a CSS box.
+* **border**: The border sits between the outer edge of the padding and the inner edge of the margin.
+
+In the following example, we'll name our boxes as block elements:
+```html
+
+<div class="block">
+  ...
+</div>
+
+<section class="block">
+  ...
+</section>
+
+<footer class="block">
+  ...
+</footer>
+```
+
+```css
+.block {
+  width: 100%;
+  height: 100vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  border: 1px solid red;
+}
+```
+In the above example, we used relative units for width/height. Percent (% - relative to their parent) for the width. We then apply a virtual height to the boxes (vh - relative to browser height). 
+
+Notice the margin property - we specified all 4 margins. In this case, we should just use the shorthand syntax ```margin: 50px auto;``` . Margin as well as padding shorthand syntax goes like this:
+
+```css
+
+[element] {
+  margin: [margin-top] [margin-left] [margin-bottom] [margin-right]; 
+}
+
+/* 
+ * if you want to horizontaly center an element
+ * you can give them left/right margins automatic values
+ */
+[element] {
+  margin: 50px auto 50px auto; 
+}
+
+/*
+ * in the above case, since top/bottom - left/right have equal values 
+ * you can just do this
+ */
+[element] {
+  margin: 50px auto; 
+}
+
+/* In the padding example, all four paddings have the same value */
+[element] {
+  padding: 25px; 
+}
+```
+> **Note**: Shorthand syntax should be avoided on very large projects. However, as everything, sometimes makes total sense to use them, choose wisely. 
+
+##### Display
+A CSS box element can be of many types. The most basic ones are:
+* **block**: is defined as a box that's stacked upon other boxes. The whole box model as described above applies to block boxes.
+* **inline**: is the opposite of a block box. It flows with the document's text.
+* **inline-block**: Is something in between the first two.
+
+```html
+
+<span class="block">
+  <div class="block__element">Hello world</div>
+</span>
+```
+
+```css
+
+.block {
+  display: block;  
+}
+
+.block__element {
+    display: inline-block;
+}
+
+```
+> **Note**: By default, block level elements have display: block; set on them, and inline elements have display: inline; set on them.
+
+##### References
+> * [Introduction to CSS layout - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction)
+> * [The box model - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)
 ---
 
 **[Back to top](#table-of-contents)**
 
+#### Positioning
+The position property sets the behaviour of a CSS box element in the document - think of it as different types of layers. 
+
+The position property can have the following values:
+* **static**: is the default that every box gets.
+* **relative**: it means the box is relative to its parent and to its siblings and other elements (any property value given to the box is relative to its parent).
+* **absolute**:
+* **fixed**:
+* **sticky**:
 ---
+**[Back to top](#table-of-contents)**
 
 ## Methodologies
 CSS methodologies help developers **maintain and scale** the front-end as a set of small, isolated modules. Rather than as one massive lump of indivisible code. [SMACSS](https://smacss.com/) and [BEM](http://getbem.com/) are two of the most well known options.
