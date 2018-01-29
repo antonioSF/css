@@ -43,7 +43,8 @@ Other Guides
 10. [Best Practices](#best-practices)
 
 ## Introduction
-If HTML is for content and presentation mainly, CSS (Cascading Style Sheets) is used to style and design that content. When a Web browser displays a document, it first loads the HTML, parses it and creates a DOM (Document Object Model) from it. Only then parses the CSS. 
+CSS (Cascading Style Sheets) is used to style and design HTML content. When a Web browser displays a document, it first loads the HTML, parses it and creates a DOM (Document Object Model) from it. Only then parses the CSS. 
+
 There are three different ways to apply CSS to an HTML document:
 
 * **External Stylesheet**: An external file usually referenced by a ```<link>``` in the ```<head>``` of the HTML Document.
