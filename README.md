@@ -1058,7 +1058,7 @@ For Example, we're asked to build a simple layout prototype for a blog website -
 </div>
 ```
 
-We defined already our semantic elements inside our grid wrapper. Now let's styled them:
+We defined already our semantic elements inside our grid wrapper. Now let's style them:
 
 ```css
 
@@ -1066,7 +1066,7 @@ We defined already our semantic elements inside our grid wrapper. Now let's styl
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 10vh 78vh 10vh;
-    grid-gap: 1vh;
+    grid-gap: 1vh 0.5rem;
     grid-template-areas: 
         "h h h h h h h h h h h h"
         "c c c c c c c c c c s s"
@@ -1093,6 +1093,13 @@ We defined already our semantic elements inside our grid wrapper. Now let's styl
     ...
 }
 ```
+
+In the example above, we've create a grid with the following properties and values:
+* ```grid-template-columns: repeat(12, 1fr);``` - we set 12 columns, each being one fraction unit wide (1/12 of the total width).
+* ```grid-template-rows: 10vh 78vh 10vh;``` - we set 3 rows, the first row has the height 10vh, the second 78vh and the third 10vh.
+* ```grid-gap: 1vh 0.5rem;``` - it's the shorthand property for grid-row-gap and grid-column-gap specifying the gutters between grid rows and columns.
+* ```grid-template-areas``` - specifies named grid areas, creating a visual representation of our grid in the code. Each line represents a row and each of the characters (h, c, s, f) represent a grid cell.
+* ```grid-area``` - is a shorthand property for grid-row-start, grid-column-start, grid-row-end and grid-column-end, specifying a grid item's size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its grid area. In this case, we simply connect those grid areas with our items giving it a custom value predefined in our ```grid-template-area``` in the container wrapper.
 
 ##### References
 > * [CSS Grid Layout Module Level 1](https://www.w3.org/TR/css-grid-1/)
