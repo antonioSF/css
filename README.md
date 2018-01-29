@@ -1027,7 +1027,7 @@ Flexbox is ideal to define components and smaller *inner* layouts. While the [Gr
 **[Back to top](#table-of-contents)**
 
 ## Grid
-The Grid is a very powerfull CSS module that allow developers to easily build website layouts. It defines a two-dimensional grid-based layout system - **columns** and **rows** - optimized for user interface design.
+The Grid is a very powerful CSS module that allow developers to easily build website layouts. It defines a two-dimensional grid-based layout system - **columns** and **rows** - optimized for user interface design.
 
 Although CSS Grid is easy enough to understand, it can be hard to master. It has [18 new properties](https://css-tricks.com/snippets/css/complete-guide-grid/) plus other concepts you've never heard of anywhere else in CSS.
 
@@ -1101,7 +1101,7 @@ In the example above, we've create a grid with the following properties and valu
 * ```grid-template-areas``` - specifies named grid areas, creating a visual representation of our grid in the code. Each line represents a row and each of the characters (h, c, s, f) represent a grid cell.
 * ```grid-area``` - it's the shorthand property for grid-row-start, grid-column-start, grid-row-end and grid-column-end. In this case, we've connected those grid areas with our items giving it a custom value predefined in our ```grid-template-area``` in the container wrapper.
 
-> **Note**: Here, we've just touch the surface of CSS Grid, we saw it's potential at dividing a page into major regions, or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives. With responsiveness in mind - *media-queries* - it becomes even more powerfull. 
+> **Note**: Here, we've just touch the surface of CSS Grid, we've tested it's potential at dividing a page into major regions, or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives. With responsiveness in mind - *media-queries* - it becomes even more powerful. 
 
 ##### References
 > * [CSS Grid Layout Module Level 1](https://www.w3.org/TR/css-grid-1/)
