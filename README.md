@@ -1099,7 +1099,9 @@ In the example above, we've create a grid with the following properties and valu
 * ```grid-template-rows: 10vh 78vh 10vh;``` - we set 3 rows, the first row has the height 10vh, the second 78vh and the third 10vh.
 * ```grid-gap: 1vh 0.5rem;``` - it's the shorthand property for grid-row-gap and grid-column-gap specifying the gutters between grid rows and columns.
 * ```grid-template-areas``` - specifies named grid areas, creating a visual representation of our grid in the code. Each line represents a row and each of the characters (h, c, s, f) represent a grid cell.
-* ```grid-area``` - is a shorthand property for grid-row-start, grid-column-start, grid-row-end and grid-column-end, specifying a grid item's size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its grid area. In this case, we simply connect those grid areas with our items giving it a custom value predefined in our ```grid-template-area``` in the container wrapper.
+* ```grid-area``` - it's the shorthand property for grid-row-start, grid-column-start, grid-row-end and grid-column-end. In this case, we've connected those grid areas with our items giving it a custom value predefined in our ```grid-template-area``` in the container wrapper.
+
+> **Note**: Here, we've just touch the surface of CSS Grid, we saw it's potential at dividing a page into major regions, or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives. With responsiveness in mind - *media-queries* - it becomes even more powerfull. 
 
 ##### References
 > * [CSS Grid Layout Module Level 1](https://www.w3.org/TR/css-grid-1/)
