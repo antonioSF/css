@@ -1000,7 +1000,7 @@ Now, let's say, in the desktop version, we wanted to change the items order (put
     order: 2;
   }
 
-  .main-header__navigation [
+  .main-header__navigation {
     order: 1;
   }
 
@@ -1027,9 +1027,79 @@ Flexbox is ideal to define components and smaller *inner* layouts. While the [Gr
 **[Back to top](#table-of-contents)**
 
 ## Grid
+The Grid is a very powerfull CSS module that allow developers to easily build website layouts. It defines a two-dimensional grid-based layout system - **columns** and **rows** - optimized for user interface design.
 
+Although CSS Grid is easy enough to understand, it can be hard to master. It has [18 new properties](https://css-tricks.com/snippets/css/complete-guide-grid/) plus other concepts you've never heard of anywhere else in CSS.
+
+There are two core concepts you need to know:
+* The Grid Container - the wrapper/parent element of all grid items.
+* The Grid Item - the children (direct descendants) of the grid container.
+
+For Example, we're asked to build a simple layout prototype for a blog website - it needs a **main header** for the logo and main navigation, a **main content area**, a **sidebar** and a footer.
+
+```html
+
+<div class="grid-wrapper">
+    <header class="main-header">
+        ...
+    </header>
+
+    <main class="main-content">
+        ...
+    </main>
+
+    <aside class="main-sidebar">
+        ...
+    </aside>
+
+    <footer class="main-footer">
+        ...
+    </footer>
+</div>
+```
+
+We defined already our semantic elements inside our grid wrapper. Now let's styled them:
+
+```css
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10vh 78vh 10vh;
+    grid-gap: 1vh;
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "c c c c c c c c c c s s"
+        "f f f f f f f f f f f f";
+}
+
+.main-header {
+    grid-area: h;
+    ...
+}
+
+.main-content {
+    grid-area: c;
+    ...
+}
+
+.main-sidebar {
+    grid-area: s;
+    ...
+}
+
+.main-footer {
+    grid-area: f;
+    ...
+}
+```
 
 ##### References
+> * [CSS Grid Layout Module Level 1](https://www.w3.org/TR/css-grid-1/)
+> * [A Complete Guide to Grid | CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
+> * [CSS Grid Layout - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+> * [How to Efficiently Master the CSS Grid — in a Jiffy](https://medium.com/flexbox-and-grids/how-to-efficiently-master-the-css-grid-in-a-jiffy-585d0c213577)
+> * [How to prototype websites quickly with CSS Grid – freeCodeCamp](https://medium.freecodecamp.org/how-to-prototype-websites-quickly-with-css-grid-ffc9cba08583)
 
 ---
 
