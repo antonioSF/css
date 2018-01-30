@@ -7,7 +7,7 @@ WSA Internal CSS Guide
 
 Other Guides
 
-  - [HTML5](https://github.com/antonioSF/html)
+  - [HTML](https://github.com/antonioSF/html)
   - [JavaScript](https://github.com/antonioSF)
   - [Environment / Scaffolding / Bundles / deployments](https://github.com/antonioSF)
 
